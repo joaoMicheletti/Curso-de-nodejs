@@ -1,0 +1,35 @@
+[Imagem Atraente de Desenvolvimento de Software]
+
+Você está pronto para transformar seu interesse em programação em habilidades práticas? Apresentamos o curso definitivo para iniciantes no mundo do desenvolvimento de software!
+
+🌐 Curso de Desenvolvimento Web com Node.js 🚀
+
+O que você vai aprender:
+
+    Construa seu primeiro servidor web usando Node.js e Express
+    Crie uma poderosa aplicação de backend com SQLite3
+    Realize operações de banco de dados de forma eficiente com Knex.js
+    Desenvolva habilidades práticas enquanto constrói um sistema de cadastro de pessoas
+
+Por que escolher nosso curso?
+
+    Abordagem Prática: Aprenda fazendo! Desenvolva uma aplicação real desde o início.
+    Suporte Exclusivo: Acesso a uma comunidade de aprendizes e suporte contínuo dos instrutores.
+    Projetado para Iniciantes: Sem jargões complicados, sem confusões. Um guia passo a passo para quem está dando os primeiros passos na programação.
+    Certificado de Conclusão: Receba um certificado reconhecido ao finalizar o curso, destacando suas novas habilidades.
+
+Destaque-se na Indústria Tech! 🚀
+
+Inscreva-se agora e dê o primeiro passo para uma carreira empolgante no desenvolvimento de software!
+
+[Botão de Inscrição Agora]
+
+Oferta Especial por Tempo Limitado!
+
+Faça parte da próxima geração de desenvolvedores web! 🌐🖥️
+
+[Imagem de Logo e Redes Sociais]
+
+#NodeJS #DesenvolvimentoWeb #AprendaProgramação #CursoOnline
+
+Lembre-se de personalizar a propaganda com informações específicas, como preço, tempo de acesso ao curso, depoimentos de alunos (se disponíveis), e qualquer outra informação relevante. Certifique-se também de incluir um chamado claro para ação (CTA), como "Inscreva-se Agora" ou "Garanta sua Vaga".
