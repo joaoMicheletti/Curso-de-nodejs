@@ -119,6 +119,8 @@ h2 {
 
 /* Estilos do rodapé */
 footer {
+    isplay: flex;
+    flex-direction: row;
     background-color: #333;
     color: #fff;
     padding: 10px;
