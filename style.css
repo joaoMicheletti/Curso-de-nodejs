@@ -77,7 +77,7 @@ a {
 .next-btn {
     font-weight: 900;
     font-size: 30px ;
-    background-color: #484849b6;
+    background-color: transparent;
     width: 50px;
     height: 100%;
     color: white;
