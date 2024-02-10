@@ -1,82 +1,127 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>NodeJS Jornada Inicial</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11465199160"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-11465199160');
-</script>
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Sheila Salgodos</title>
+    <script>
+        function Manutencao(){
+            alert('Formulário de pedido em manutenção');
+        };
+    </script>
 </head>
 <body>
-    <!-- Cabeçalho -->
     <header>
-        <h1>Curso de Desenvolvimento Web com Node.js</h1>
+        <img id="logo" src="./imgs_sheila_salgados/CAPA.jpeg" alt="logo"/>
+        <div id="nav">
+            <a href="#Produtos">Produtos</a>
+            <a href="#loja">Loja Fisica</a>
+            <a href="#pedido">fazer pedido</a>
+        </div>
     </header>
-    <!-- Corpo da página -->
-    <section id="top">
-        <div id="curso">
-            <h2>O que você vai aprender:</h2>
-            <p>
-                Construa seu primeiro servidor web usando Node.js e Express
-                <br/>Crie uma poderosa aplicação de backend com SQLite3
-                <br/>Realize operações de banco de dados de forma eficiente com Knex.js
-                <br/>Desenvolva habilidades práticas enquanto constrói um sistema de cadastro de pessoas
-            </p>
-        </div>
-        <div id="logonode">
-            <img src="./nonode.png" alt="logo nodejs"/>
-        </div>
-    </section>
-    <section id="meio">
-        <div id="porque">
-            <h2>Por que escolher nosso curso?</h2>
-            <p>
-                Abordagem Prática: Aprenda fazendo! Desenvolva uma aplicação real desde o início.
-                <br/>Projetado para Iniciantes: Sem jargões complicados, sem confusões. Um guia passo a passo para quem está dando os primeiros passos na programação.
-                <br/>Certificado de Conclusão: Receba um certificado reconhecido ao finalizar o curso, destacando suas novas habilidades.
-                <br/> Projeto: Desenvolva um projeto do total zero para colocar no seu portfolio.
-            </p>
-        </div>
-        <div id="destaque">
-            <h2>Destaque-se na Indústria Tech! </h2>
-            <p>
-                dê o primeiro passo para uma carreira empolgante no desenvolvimento de software!
-            </p>
-        </div>
-    </section>
-    <section id="T">
-        <div class="background-img">
-            <div class="overlay-text">
-                <p><em>Você está pronto para transformar seu interesse em programação em habilidades práticas?</em></p>
-                <p><strong>Faça parte da próxima geração de desenvolvedores web! 🌐🖥️</strong></p>
-                <a href="https://pay.kiwify.com.br/DoJaBEO" class="btn-inscreva-se">Adquira o nosso curso</a>
+    <section id="Produtos">
+        <div id="imghome">
+            <div class="project-section">
+                <div class="projects-container">
+                    <div class="project" id="project1">
+                    <!-- Conteúdo do Projeto 1 -->
+                    <img id="imgprojeto" src="imgs_sheila_salgados/coxinhaProp.png" alt="projeto bealtybook"/>
+                    </div>
+                    <div class="project" id="project2">
+                        <!-- Conteúdo do Projeto 2 -->
+                        <img id="imgprojeto" src="imgs_sheila_salgados/salgadofesta.png" alt="projeto bealtybook"/>
+                    </div>
+                    <div class="project" id="project3">
+                        <!-- Conteúdo do Projeto 3 -->
+                        <img id="imgprojeto" src="imgs_sheila_salgados/marmitex.png" alt="projeto bealtybook"/>
+                    </div>
+                    <div class="project" id="project4">
+                        <!-- Conteúdo do Projeto 3 -->
+                        <img id="imgprojeto" src="imgs_sheila_salgados/refri.png" alt="projeto bealtybook"/>
+                    </div>
+                    <!-- Adicione mais projetos conforme necessário -->
+                </div>
+                <div class="slide-buttons">
+                    <button class="prev-btn" onclick="changeProject(-1)">&#10094;</button>
+                    <button class="next-btn" onclick="changeProject(1)"> &#10095;</button>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Rodapé -->
-    <footer>
-        <div class="footer-left">
-            © 2024 <VmSoftware/>. Todos os direitos reservados.
-            <p>#NodeJS 
-                <br/>#DesenvolvimentoWeb 
-                <br/>#AprendaProgramação 
-                <br/>#CursoOnline
-            </p>
+    <section id="loja">
+        <div id="endereco">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1537.9040078542157!2d-47.038716428447!3d-23.540673604902533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0ef326c291ff%3A0x8b642535755f0d8!2sGaleria%20S%C3%A3o%20Jo%C3%A3o%20Novo!5e0!3m2!1spt-BR!2sbr!4v1707520072862!5m2!1spt-BR!2sbr" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
-        <div class="footer-right">
+    </section>
+    <section id="pedido">
+        <div id="form">
+            <label for="produto">Produto</label><br/>
+            <select id="select" name="produto">
+                <option value="Selecione">Selecione </option>
+                <option value="salgados de 0,99">Salgados de 0,99</option>
+                <option value="salgado para festa">salgado para festa</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <br/>   
+            <br/>
+            <label for="Quantidade">Quantidade</label><br/>
+            <input id="select" type="number" placeholder="Quantidade"/>
             <br/>
             <br/>
-            <a href="#" target="_blank"><img src="./instagram.png" alt="logo"/></a>
-            <a href="#" target="_blank"><img src="facebook.png" alt="logo"/></a>
+            <label for="bebida">Bebidas</label><br/>
+            <select id="select" name="bebidas">
+                <option value="Selecione">Selecione </option>
+                <option value="nao">não acompanha </option>
+                <option value="coca lata">coca lata</option>
+                <option value="guarana lata">guarana lata</option>
+                <option value="fanta laranja lata">fanta laranja lata</option>
+                <option value="suco delvale lata">suco del vale lata</option>
+                <option value="aagua">Água</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <br/>
+            <br/>
+            <label for="entrega">Entrega</label><br/>
+            <select id="select" name="entrrega">
+                <option value="Selecione">Selecione </option>
+                <option value="nao">retirada </option>
+                <option value="coca lata">Manutemção no momento!</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <br/>
+            <br/>
+            <label for="pagamento">pagamento</label><br/>
+            <select id="select" name="pagamento">
+                <option value="Selecione">Selecione </option>
+                <option value="debito">cartão debito</option>
+                <option value="credito">cartão Credito</option>
+                <option value="pix">pix</option>
+                <option value="dinheiro">dinheiro</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <br/>
+            <br/>
+            <button onclick="Manutencao()" id="consultar">Consultar valor do pedido</button>
+            <br/>
+            <br/>
+            <p>Valor : R$ ****</p>
+            <br/>
+            <br/>
+            <button onclick="Manutencao()" id="enviar">Enviar pedido</button>
+            <br/>
+            <br/>
         </div>
-    </footer>
+    </section>
+    <script src="scripts.js"></script>
+    
 </body>
 </html>
-
