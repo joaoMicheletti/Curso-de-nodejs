@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cantinhostyle.css"/>
+    <title>Sheila Salgodos</title>
+    <script>
+        function Manutencao(){
+            alert('Formulário de pedido em manutenção');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="./image/logocbia.jpg" alt="logo"/>
+        <div id="nav">
+            <a href="#Produtos">Preços</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#pedido">fazer pedido</a>
+        </div>
+    </header>
+    <section id="Produtos">
+        <div id="imghome">
+            <div class="project-section">
+                <div class="projects-container">
+                    <div class="project" id="project1">
+                    <!-- Conteúdo do Projeto 1 -->
+                    <img id="imgprojeto" src="./image/colher.png" alt="ovo de colher"/>
+                    </div>
+                    <div class="project" id="project2">
+                        <!-- Conteúdo do Projeto 2 -->
+                        <img id="imgprojeto" src="./image/tradbranco.png" alt="projeto bealtybook"/>
+                    </div>
+                    <div class="project" id="project3">
+                        <!-- Conteúdo do Projeto 3 -->
+                        <img id="imgprojeto" src="./image/trufados.png" alt="projeto bealtybook"/>
+                    </div>
+                    <div class="project" id="project4">
+                        <!-- Conteúdo do Projeto 3 -->
+                        <img id="imgprojeto" src="./image/tradi.png" alt="projeto bealtybook"/>
+                    </div>
+                    <!-- Adicione mais projetos conforme necessário -->
+                </div>
+                <div class="slide-buttons">
+                    <button class="prev-btn" onclick="changeProject(-1)">&#10094;</button>
+                    <button class="next-btn" onclick="changeProject(1)"> &#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="produtos">
+        <div class="carousel">
+            <div class="carousel-inner">
+              <img src="image/01.jpeg" alt="Imagem 1">
+              <img src="image/02.jpeg" alt="Imagem 2">
+              <img src="image/03.jpeg" alt="Imagem 3">
+              <img src="image/04.jpeg" alt="Imagem 4">
+              <img src="image/05.jpeg" alt="Imagem 5">
+              <img src="image/06.jpeg" alt="Imagem 6">
+              <img src="image/07.jpeg" alt="Imagem 7">
+              <img src="image/08.jpeg" alt="Imagem 8">
+              <img src="image/09.jpeg" alt="Imagem 9">
+              <img src="image/10.jpeg" alt="Imagem 10">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+          
+          <script src="scriptcarrocel.js"></script>
+    </section>
+    <section id="pedido">
+        
+    </section>
+    <script src="scripts.js"></script>
+    <footer>
+        <div class="footer-content">
+          <p>Todos os direitos reservados &copy; 2024</p>
+          <div class="social-links">
+            <a target="_blank" href="https://www.instagram.com/cantinhodabi_?igsh=MXFmMTJvaTU1OWw3ag==https://www.instagram.com/cantinhodabi_?igsh=MXFmMTJvaTU1OWw3ag=="><img src="image/instagram.png" alt="Instagram"></a>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100063733983690&mibextid=ZbWKwL"><img src="image/facebook.png" alt="Facebook"></a>
+          </div>
+        </div>
+      </footer>
+    
+</body>
+</html>
