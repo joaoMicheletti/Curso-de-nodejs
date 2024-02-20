@@ -10,6 +10,124 @@
             alert('Formulário de pedido em manutenção');
         };
     </script>
+    <script>
+        function brannco(){
+            var elemento = document.querySelector('#chocolateBranco');
+            var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+            if(displayAtual === 'none'){
+                elemento.style.display = 'block';
+            } else {
+                elemento.style.display = 'none';
+            }
+        };
+        function aoLeite(){
+            var elemento = document.querySelector('#aoLeite');
+            var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+            if(displayAtual === 'none'){
+                elemento.style.display = 'block';
+            } else {
+                elemento.style.display = 'none';
+            }
+        };
+        function colher(){
+            var elemento = document.querySelector('#colher');
+            var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+            if(displayAtual === 'none'){
+                elemento.style.display = 'block';
+            } else {
+                elemento.style.display = 'none';
+            }
+        };
+
+        function trufado(){
+            var elemento = document.querySelector('#trufado');
+            var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+            if(displayAtual === 'none'){
+                elemento.style.display = 'block';
+            } else {
+                elemento.style.display = 'none';
+            }
+        };
+
+
+        function valorTradBranco(){
+            var brancoObject = {
+            '250g': 35,
+            '350g': 45,
+            '500g': 57,
+            '1kilo': 98
+            };
+
+            var gramasInstance = document.querySelector('#gramasChocolateBrano').value;
+            var quanttidadeInstance = document.querySelector("#chocolateBranco > .quantidade").value;
+
+            if(gramasInstance === 'Selecione'){
+                alert('Selecione a gramatura do ovo!!!')
+            } else if(quanttidadeInstance <= 0){
+                alert('Defina uma quantidade Valida!!!');
+            } else {
+                var tot = brancoObject[gramasInstance] * quanttidadeInstance;
+                document.querySelector("#totB").innerHTML = ` R$ : ${tot.toFixed(2)}`;
+            }
+        };
+        function valorTradLeite(){
+            var aoLeiteObject = {
+            '250g': 32,
+            '350g': 45,
+            '500g': 57,
+            '1kilo': 95
+            };           
+
+            var gramasInstance = document.querySelector('#chocoAoLeite').value;
+            var quanttidadeInstance = document.querySelector("#aoLeite > .quantidade").value;
+            console.log(quanttidadeInstance);
+
+            if(gramasInstance === 'Selecione'){
+                alert('Selecione a gramatura do ovo!!!')
+            } else if(quanttidadeInstance <= 0){
+                alert('Defina uma quantidade Valida!!!');
+            } else {
+                var tot = aoLeiteObject[gramasInstance] * quanttidadeInstance;
+                
+                document.querySelector("#totLeite").innerHTML = ` R$ : ${tot.toFixed(2)}`;
+            }
+        };
+
+        function valorColher(){
+            var colherObject = {
+            '250g': 43,
+            '350g': 53,
+            '500g': 68,
+            '1kilo': 124
+        };                       
+
+            var gramasInstance = document.querySelector('#ovoColher').value;
+            var saborInsttance = document.querySelector('#selectSaborColher').value;
+            var quanttidadeInstance = document.querySelector("#colher > .quantidade").value;
+            console.log(gramasInstance, saborInsttance, quanttidadeInstance);
+
+            if(gramasInstance === 'Selecione'){
+                alert('Selecione a gramatura do ovo!!!')
+            } else if(saborInsttance === "Selecione"){
+                alert("sellecione um sabor");
+
+            } else if(quanttidadeInstance <= 0){
+                alert('Defina uma quantidade Valida!!!');
+            } else {
+                var tot = colherObject[gramasInstance] * quanttidadeInstance;
+                
+                document.querySelector("#totColher").innerHTML = ` R$ : ${tot.toFixed(2)}`;
+            }
+        };
+        
+        
+        var ttrufadoObject = {
+            '250': 55,
+            '350': 60,
+            '500': 75,
+            '1k': 120
+        };
+    </script>
 </head>
 <body>
     <header>
@@ -106,7 +224,7 @@
             <h3>Faça seu pedido.</h3>
             <div class="pedidoCategoria">
                 <div  class="brancoTrad">
-                    <button class="separador" >Tradicional Chocolatte Branco</button>
+                    <button onclick="brannco()" class="separador" >Tradicional Chocolatte Branco</button>
                     <div id="chocolateBranco">
                         <br/>
                         <p>Peso em Gramas</p>
@@ -118,20 +236,22 @@
                             <option value="1kilo">1kilo</option>    
                         </select>
                         <p>Quantidade</p>
-                        <input class="quanidade" type="number" >
+                        <input class="quantidade" type="number" >
                         <br/>
                         <br/>
-                        <p>Valor: R$ </p>
+                        <button class="valor" onclick="valorTradBranco()">Consultar Valor</button>
+                        <br/><br/>
+                        <p  id="totB">Valor: R$ </p>
                     </div>
                 </div>
             </div>
             <div class="pedidoCategoria">
                 <div  class="aoLeiteTrad">
-                    <button class="separador" >Tradicional Chocolatte ao Leite</button>
+                    <button onclick="aoLeite()" class="separador" >Tradicional Chocolatte ao Leite</button>
                     <div id="aoLeite">
                         <br/>
                         <p>Peso em Gramas</p>
-                        <select id="gramasChocolateBrano" class="gramas">
+                        <select id="chocoAoLeite" class="gramas">
                             <option value="Selecione">Selecione</option>
                             <option value="250g">250g</option>
                             <option value="350g">350g</option>
@@ -139,37 +259,53 @@
                             <option value="1kilo">1kilo</option>    
                         </select>
                         <p>Quantidade</p>
-                        <input class="quanidade" type="number" >
+                        <input class="quantidade" type="number" >
                         <br/>
                         <br/>
-                        <p>Valor: R$ </p>
+                        <button onclick="valorTradLeite()">Consultar Valor</button>
+                        <p id="totLeite">Valor: R$ </p>
                     </div>
                 </div>
             </div>
             <div class="pedidoCategoria">
                 <div  class="colher">
-                    <button class="separador" >Ovo De Colher</button>
+                    <button onclick="colher()" class="separador" >Ovo De Colher</button>
                     <div id="colher">
                         <br/>
                         <p>Peso em Gramas</p>
-                        <select id="gramasChocolateBrano" class="gramas">
+                        <select id="ovoColher" class="gramas">
                             <option value="Selecione">Selecione</option>
                             <option value="250g">250g</option>
                             <option value="350g">350g</option>
                             <option value="500g">500g</option>
                             <option value="1kilo">1kilo</option>    
                         </select>
+                        <p>Sabores</p>
+                        <select id="selectSaborColher" class="gramas">
+                            <option value="Selecione">Selecione</option>
+                            <option value="Brigadeiro">Brigadeiro</option>
+                            <option value="Beijinho">Beijinho</option>
+                            <option value="Fruttas_vermelhas">Fruttas_vermelhas</option>
+                            <option value="Prestigio">Prestigio</option>    
+                            <option value="Kit-Kat">Kit-Kat</option>
+                            <option value="Ouro_Branco">Ouro_Branco</option>
+                            <option value="Ninho_Trufado">Ninho_Trufado</option>
+                            <option value="Maracujá">Maracujá</option>
+                            <option value="Morango">Morango</option>
+                            <option value="Ninnho_com_Nutella">Ninnho_com_Nutella</option>
+                        </select>
                         <p>Quantidade</p>
-                        <input class="quanidade" type="number" >
+                        <input class="quantidade" type="number" >
                         <br/>
                         <br/>
-                        <p>Valor: R$ </p>
+                        <button onclick="valorColher()">Consultaar Valot</button>
+                        <p id="totColher">Valor: R$ </p>
                     </div>
                 </div>
             </div>
             <div class="pedidoCategoria">
                 <div  class="trufado">
-                    <button class="separador" >Ovo  Trufado</button>
+                    <button onclick="trufado()" class="separador" >Ovo  Trufado</button>
                     <div id="trufado">
                         <br/>
                         <p>Peso em Gramas</p>
@@ -180,11 +316,25 @@
                             <option value="500g">500g</option>
                             <option value="1kilo">1kilo</option>    
                         </select>
+                        <p>Sabores</p>
+                        <select id="selectSaborTrufado" class="gramas">
+                            <option value="Selecione">Selecione</option>
+                            <option value="Brigadeiro">Brigadeiro</option>
+                            <option value="Beijinho">Beijinho</option>
+                            <option value="Fruttas_vermelhas">Fruttas_vermelhas</option>
+                            <option value="Prestigio">Prestigio</option>    
+                            <option value="Kit-Kat">Kit-Kat</option>
+                            <option value="Ouro_Branco">Ouro_Branco</option>
+                            <option value="Ninho_Trufado">Ninho_Trufado</option>
+                            <option value="Maracujá">Maracujá</option>
+                            <option value="Morango">Morango</option>
+                            <option value="Ninnho_com_Nutella">Ninnho_com_Nutella</option>
+                        </select>
                         <p>Quantidade</p>
-                        <input class="quanidade" type="number" >
+                        <input class="quantidade" type="number" >
                         <br/>
                         <br/>
-                        <p>Valor: R$ </p>
+                        <p id="totTrufado">Valor: R$ </p>
                     </div>
                 </div>
                 <br/>
@@ -200,7 +350,9 @@
             <p id="valorTotal">Total:</p>
             <br/>
             <p class="endereco">Endereço</p>
-            <input id="endereco" type="text" placeholder="Endereço"/>
+            <input id="endereco" type="text" placeholder="Endereço"/><br/><br/>
+            <p class="endereco">Seu nome </p>
+            <input id="endereco" type="text" placeholder="seu nome"/>
             <br/>
             <button id="finalizar">Enviar pedio</button>
         </div>
