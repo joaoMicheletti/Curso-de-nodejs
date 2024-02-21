@@ -102,12 +102,17 @@
         };                       
 
             var gramasInstance = document.querySelector('#ovoColher').value;
+            var selecioneChocolate = document.querySelector('#bandaColher').value
             var saborInsttance = document.querySelector('#selectSaborColher').value;
             var quanttidadeInstance = document.querySelector("#colher > .quantidade").value;
-            console.log(gramasInstance, saborInsttance, quanttidadeInstance);
+            var obs = document.querySelector('#obsColher').value;
+            console.log(gramasInstance, saborInsttance, selecioneChocolate, quanttidadeInstance, obs);
 
             if(gramasInstance === 'Selecione'){
                 alert('Selecione a gramatura do ovo!!!')
+            } else if(selecioneChocolate === 'Selecione'){
+                alert('Selecione o chocolate!')
+
             } else if(saborInsttance === "Selecione"){
                 alert("sellecione um sabor");
 
@@ -120,13 +125,42 @@
             }
         };
         
-        
-        var ttrufadoObject = {
-            '250': 55,
-            '350': 60,
-            '500': 75,
-            '1k': 120
+        function valorTrufado(){
+            
+            var gramasInstance = document.querySelector('#gramasTrufado').value;
+            var banda1 = document.querySelector('#bandaOne').value;
+            var banda2 = document.querySelector("#bandaTwo").value;
+            var sabor1 = document.querySelector("#selectSaborTrufadoOne").value; 
+            var sabor2 = document.querySelector("#selectSaborTrufadoTwo").value;
+            var quantidade = document.querySelector('#Quantidade').value;
+            var obs = document.querySelector("#obsTrufado").value;
+            console.log(gramasInstance, banda1, banda2, sabor1, sabor2, quantidade, obs);
+            var trufadoObject = {
+            '250g': 55,
+            '350g': 60,
+            '500g': 75,
+            '1kilo': 120
+            };    
+            
+            if(gramasInstance === 'Selecione'){
+                alert("selecione agramatura do Ovo");
+            } else if(banda1 === 'Selecione'){
+                alert('Selecione O Chocolate da Banda 1!!!');
+            } else if(banda2 === 'Selecione'){
+                alert('Selecione o Chjocolatre da banda 2!!!');
+            } else if(sabor1 === 'Selecione'){
+                alert('Selecione o sabor do lado 1');
+            } else if(sabor2 === 'Selecione'){
+                alert('Selecione o sabor do lado 2');
+            } else if(quantidade <= 0 ){
+                alert('Defina uma Quantidade Valida!');
+            } else {
+                var total = trufadoObject[gramasInstance] * quantidade;
+                document.querySelector("#totTrufado").innerHTML = `R$ ${total.toFixed(2)}`;
+            }
         };
+        
+        
     </script>
 </head>
 <body>
@@ -280,6 +314,12 @@
                             <option value="500g">500g</option>
                             <option value="1kilo">1kilo</option>    
                         </select>
+                        <p>Selecione o chocolate</p>
+                        <select id="bandaColher" class="gramas">
+                            <option value="Selecione">Selecione o chocolate</option>
+                            <option value="ao_Leite">Chocolate ao Leite</option>
+                            <option value="Branco">Cocolate Branco</option>    
+                        </select>
                         <p>Sabores</p>
                         <select id="selectSaborColher" class="gramas">
                             <option value="Selecione">Selecione</option>
@@ -298,7 +338,9 @@
                         <input class="quantidade" type="number" >
                         <br/>
                         <br/>
-                        <button onclick="valorColher()">Consultaar Valot</button>
+                        <p>OBS</p>
+                        <input id="obsColher" class="obs" type="text" placeholder="OBS: Adicionais  R$ 6,00"/><br/><br/>
+                        <button onclick="valorColher()">Consultar Valot</button>
                         <p id="totColher">Valor: R$ </p>
                     </div>
                 </div>
@@ -308,16 +350,44 @@
                     <button onclick="trufado()" class="separador" >Ovo  Trufado</button>
                     <div id="trufado">
                         <br/>
+                        <p>**Os sabores são relacionado ao lado de forma numérica "atente-se"</p>
+                        <br/>
                         <p>Peso em Gramas</p>
-                        <select id="gramasChocolateBrano" class="gramas">
+                        <select id="gramasTrufado" class="gramas">
                             <option value="Selecione">Selecione</option>
                             <option value="250g">250g</option>
                             <option value="350g">350g</option>
                             <option value="500g">500g</option>
                             <option value="1kilo">1kilo</option>    
                         </select>
-                        <p>Sabores</p>
-                        <select id="selectSaborTrufado" class="gramas">
+                        <p>Banda 1</p>
+                        <select id="bandaOne" class="gramas">
+                            <option value="Selecione">Selecione o chocolate</option>
+                            <option value="ao_Leite">Chocolate ao Leite</option>
+                            <option value="Branco">Cocolate Branco</option>    
+                        </select>
+                        <p>Banda 2</p>
+                        <select id="bandaTwo" class="gramas">
+                            <option value="Selecione">Selecione o chocolate</option>
+                            <option value="ao_Leite">Chocolate ao Leite</option>
+                            <option value="Branco">Cocolate Branco</option>    
+                        </select>
+                        <p>Sabor 1</p>
+                        <select id="selectSaborTrufadoOne" class="gramas">
+                            <option value="Selecione">Selecione</option>
+                            <option value="Brigadeiro">Brigadeiro</option>
+                            <option value="Beijinho">Beijinho</option>
+                            <option value="Fruttas_vermelhas">Fruttas_vermelhas</option>
+                            <option value="Prestigio">Prestigio</option>    
+                            <option value="Kit-Kat">Kit-Kat</option>
+                            <option value="Ouro_Branco">Ouro_Branco</option>
+                            <option value="Ninho_Trufado">Ninho_Trufado</option>
+                            <option value="Maracujá">Maracujá</option>
+                            <option value="Morango">Morango</option>
+                            <option value="Ninnho_com_Nutella">Ninnho_com_Nutella</option>
+                        </select>
+                        <p>Sabor 2</p>
+                        <select id="selectSaborTrufadoTwo" class="gramas">
                             <option value="Selecione">Selecione</option>
                             <option value="Brigadeiro">Brigadeiro</option>
                             <option value="Beijinho">Beijinho</option>
@@ -331,7 +401,10 @@
                             <option value="Ninnho_com_Nutella">Ninnho_com_Nutella</option>
                         </select>
                         <p>Quantidade</p>
-                        <input class="quantidade" type="number" >
+                        <input id="Quantidade" class="quantidade" type="number" >
+                        <br/><br/>
+                        <input id="obsTrufado" class="obs" type="text" placeholder="OBS: Adicionais  R$ 6,00  #informar o lado que a obsrvação faz refeência."/><br/><br/>
+                        <button onclick="valorTrufado()">Consultar Valot</button>
                         <br/>
                         <br/>
                         <p id="totTrufado">Valor: R$ </p>
