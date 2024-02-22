@@ -76,8 +76,14 @@
                     tot                   
                 };
                 responseTradicionalBranco = pedidoTradBranco;
-                console.log("pedido 1:",responseTradicionalBranco);
-            }
+                var elemento = document.querySelector('#divTradBranco');
+                var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+                elemento.style.display = 'block';
+                document.querySelector('#_branco').innerHTML =`${responseTradicionalBranco.title}`;
+                document.querySelector("#_gramas_branco").innerHTML = `* Ovos de: ${responseTradicionalBranco.gramasInstance}`
+                document.querySelector("#_quantidade_branco").innerHTML = `* Quantidade : ${responseTradicionalBranco.quanttidadeInstance}`
+                document.querySelector('#_valor_branco').innerHTML = `* VALOR R$: ${responseTradicionalBranco.tot}`  
+            };
         };
         //pedido trad ao Leite;
         var responseTradicionalAoleite = {};
@@ -105,8 +111,15 @@
                     quanttidadeInstance,
                     tot,
                 };
-                responseTradicionalAoleite = pedidoTradAoLeite;
-                console.log(responseTradicionalAoleite);
+                responseTradicionalAoleite = pedidoTradAoLeite;            
+                var elemento = document.querySelector("#divTradAoLeite");
+                var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+                elemento.style.display = 'block';
+                //ovos ao Leite 
+                document.querySelector('#_leite').innerHTML = `${responseTradicionalAoleite.title}`
+                document.querySelector('#_gramas_leite').innerHTML = `* Ovos de ${responseTradicionalAoleite.gramasInstance} `;
+                document.querySelector('#_quantidade_leite').innerHTML = `* Quantidade : ${responseTradicionalAoleite.quanttidadeInstance} `;
+                document.querySelector('#_valor_leite').innerHTML = `* VALOR R$: ${responseTradicionalBranco.tot}`
             };
         };
         //pedido Ovo de Colher;
@@ -145,10 +158,21 @@
                     saborInsttance, 
                     selecioneChocolate, 
                     quanttidadeInstance, 
-                    obs
+                    obs,
+                    tot
                 };
                 responseOvoColher = pedidoColher
-                console.log(responseOvoColher);
+                //ovo de colher 
+                var elemento = document.querySelector('#divOvoDeColher');
+                var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+                elemento.style.display = 'block';
+                document.querySelector("#_colher").innerHTML = `${responseOvoColher.title}`
+                document.querySelector('#_gramas_colher').innerHTML = `* Ovos de:  ${responseOvoColher.gramasInstance}`;
+                document.querySelector('#_chocolate_colher').innerHTML = `* Tipo de Chocolate :  ${responseOvoColher.saborInsttance}`;
+                document.querySelector('#_sabor_colher').innerHTML = `* Recheio Sabor :  ${responseOvoColher.saborInsttance}`;
+                document.querySelector('#_quantidade_colher').innerHTML = `* Quantidade :  ${responseOvoColher.quanttidadeInstance}`;
+                document.querySelector('#_obs_colher').innerHTML = `* OBS-PEDIDO :  ${responseOvoColher.obs}`;
+                document.querySelector('#_valor_colher').innerHTML = `* VALOR R$: ${responseTradicionalBranco.tot}`
             };
         };
         
@@ -195,51 +219,43 @@
                     sabor2,
                     quantidade,
                     obs,
-                    total
+                    tot
                 };
                responseOvoTrufado = pedidoTrufado;
-               console.log(responseOvoTrufado);
+               var elemento = document.querySelector('#divOvoTrufado');
+                var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+                elemento.style.display = 'block';
+                //ovos Trufados
+                document.querySelector("#_trufado").innerHTML = `${responseOvoTrufado.title}`;
+                document.querySelector('#_gramas_trufado').innerHTML = `* Ovos de:  ${responseOvoTrufado.gramasInstance}`;
+                document.querySelector('#_banda1_trufado').innerHTML = `* Chocolate Banda 1 :  ${responseOvoTrufado.banda1}`;
+                document.querySelector('#_sabor1_trufado').innerHTML = `* banda 1 Recheio Sabor :  ${responseOvoTrufado.sabor1}`;
+                document.querySelector('#_banda2_trufado').innerHTML = `* Chocolate Banda 2 :  ${responseOvoTrufado.banda2}`;
+                document.querySelector('#_sabor2_trufado').innerHTML = `* banda 2 Recheio sabor :  ${responseOvoTrufado.sabor2}`;
+                document.querySelector('#_quantidade_trufado').innerHTML = `* Quantidade : ${responseOvoTrufado.quantidade}`;
+                document.querySelector("#_obs_trufado").innerHTML = `* OBS-PEDIDO : ${responseOvoTrufado.obs}`;
+                document.querySelector('#_valor_trufado').innerHTML = `* VALOR: ${responseTradicionalBranco.tot}`
             };
-        };
-        //mostrar meu pedido 
-        function showPedido(){
-            var elemento = document.querySelector('#verPedido');
-            var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
-            elemento.style.display = 'block';
-            //ocvo choco Branco //responseTradicionalBranco 
-             
-            document.querySelector("#_gramas_branco").innerHTML = `* Ovos de: ${responseTradicionalBranco.gramasInstance}`
-            document.querySelector("#_quantidade_branco").innerHTML = `* Quantidade : ${responseTradicionalBranco.quanttidadeInstance}`
-
-            //ovos ao Leite 
-            document.querySelector('#_gramas_leite').innerHTML = `* Ovos de ${responseTradicionalAoleite.gramasInstance} `;
-            document.querySelector('#_quantidade_leite').innerHTML = `* Quantidade : ${responseTradicionalAoleite.quanttidadeInstance} `;
-
-            //ovos de coplher 
-            document.querySelector('#_gramas_colher').innerHTML = `* Ovos de:  ${responseOvoColher.gramasInstance}`;
-            document.querySelector('#_chocolate_colher').innerHTML = `* Tipo de Chocolate :  ${responseOvoColher.saborInsttance}`;
-            document.querySelector('#_sabor_colher').innerHTML = `* Recheio Sabor :  ${responseOvoColher.saborInsttance}`;
-            document.querySelector('#_quantidade_colher').innerHTML = `* Quantidade :  ${responseOvoColher.quanttidadeInstance}`;
-            document.querySelector('#_obs_colher').innerHTML = `* OBS-PEDIDO :  ${responseOvoColher.obs}`;
-
-            //ovos Trufados
-            document.querySelector('#_gramas_trufado').innerHTML = `* Ovos de:  ${responseOvoTrufado.gramasInstance}`;
-            document.querySelector('#_banda1_trufado').innerHTML = `* Chocolate Banda 1 :  ${responseOvoTrufado.banda1}`;
-            document.querySelector('#_sabor1_trufado').innerHTML = `* banda 1 Recheio Sabor :  ${responseOvoTrufado.sabor1}`;
-            document.querySelector('#_banda2_trufado').innerHTML = `* Chocolate Banda 2 :  ${responseOvoTrufado.banda2}`;
-            document.querySelector('#_sabor2_trufado').innerHTML = `* banda 2 Recheio sabor :  ${responseOvoTrufado.sabor2}`;
-            document.querySelector('#_quantidade_trufado').innerHTML = `* Quantidade : ${responseOvoTrufado.quantidade}`;
-            document.querySelector("#_obs_trufado").innerHTML = `* OBS-PEDIDO : ${responseOvoTrufado.obs}`;
-            
-            
-            
         };
         //refazer pedido
         function refazer(){
-            var elemento = document.querySelector('#verPedido');
-            var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
-            elemento.style.display = 'none';
-        };       
+            location.reload(true);
+        };
+
+        function sendPedido(){
+            // responseOvoColher responseOvoTrufado responseTradicionalAoleite responseTradicionalBranco
+            if(responseOvoColher.gramasInstance === undefined || responseOvoTrufado.gramasInstance === undefined || responseTradicionalAoleite.gramasInstance === undefined || responseTradicionalBranco.gramasInstance === undefined){
+                alert('Seu pedido não foi encrontrado!');                
+            }else {
+                var Data = {
+                    responseTradicionalBranco,
+                    responseTradicionalAoleite,
+                    responseOvoColher,
+                    responseOvoTrufado,
+                };
+                console.log(Data);
+            }
+        };
         
     </script>
 </head>
@@ -500,43 +516,57 @@
                 ela receber o seu peddido
             </p>
             <br/>
-            <button onclick="showPedido()" id="showPedido">Ver meu Pedido</button>
-            <div id="verPedido">
-                <p id="CbiaPascoa">Orçamento</p>
-                <p id="_branco" class="title">Tradicional Chocolate Branco</p>
-                <p id="_gramas_branco" class="more">ola galéra</p>
-                <p id="_quantidade_branco" class="more">ola galéra</p>
+            
+            <p id="CbiaPascoa">Meu Pedido</p>
+                
+            <div id="divTradBranco" class="pedido">
+                <p id="_branco" class="title">.</p>
+                <p id="_gramas_branco" class="more">.</p>
+                <p id="_quantidade_branco" class="more">.</p>
+                <p id="_valor_branco" class="more">.</p>
                 <hr/>
-                <p id="_leite" class="title">Tradicinal Chocolate ao Leite</p>
-                <p id="_gramas_leite" class="more">ola galéra</p>
-                <p id="_quantidade_leite" class="more">ola galéra</p>
+            </div> 
+            <div id="divTradAoLeite" class="pedido">
+                <p id="_leite" class="title">.</p>
+                <p id="_gramas_leite" class="more">.</p>
+                <p id="_quantidade_leite" class="more">.</p>
+                <p id="_valor_leite" class="more">.</p>
                 <hr/>
-                <p id="_colher" class="title">Ovo de Colher</p>
-                <p id="_gramas_colher" class="more">ola galéra</p>
-                <p id="_chocolate_colher" class="more">ola galéra</p>
-                <p id="_sabor_colher" class="more">ola galéra</p>
-                <p id="_quantidade_colher" class="more">ola galéra</p>
-                <p id="_obs_colher" class="more">ola galéra</p>
-                <hr/>
-                <p id="_trufado" class="title">Ovo Trufado</p>
-                <p id="_gramas_trufado" class="more">ola galéra</p>
-                <p id="_banda1_trufado" class="more">ola galéra</p>
-                <p id="_sabor1_trufado" class="more">ola galéra</p>
-                <p id="_banda2_trufado" class="more">ola galéra</p>
-                <p id="_sabor2_trufado" class="more">ola galéra</p>
-                <p id="_quantidade_trufado" class="more">Ola galéra</p>
-                <p id="_obs_trufado" class="more">ola galéra</p>
-                <br/>
-                <br/>
-                <button onclick="refazer()" id="refazer" >Refazer pedido</button>
             </div>
+            <div id="divOvoDeColher" class="pedido">
+                <p id="_colher" class="title">.</p>
+                <p id="_gramas_colher" class="more">.</p>
+                <p id="_chocolate_colher" class="more">.</p>
+                <p id="_sabor_colher" class="more">.</p>
+                <p id="_quantidade_colher" class="more">.</p>
+                <p id="_valor_colher" class="more">.</p>
+                <p id="_obs_colher" class="more">.</p>
+                <hr/>
+            </div>
+            <div id="divOvoTrufado"  class="pedido">
+                <p id="_trufado" class="title">.</p>
+                <p id="_gramas_trufado" class="more">.</p>
+                <p id="_banda1_trufado" class="more">.</p>
+                <p id="_sabor1_trufado" class="more">.</p>
+                <p id="_banda2_trufado" class="more">.</p>
+                <p id="_sabor2_trufado" class="more">.</p>
+                <p id="_quantidade_trufado" class="more">.</p>
+                <p id="_valor_trufado" class="more">.</p>
+                <p id="_obs_trufado" class="more">.</p>
+                <br/>
+                <br/>
+            </div>         
+            <br/>       
+            <button onclick="refazer()" id="refazer" >Refazer pedido</button><br/><br/>
+  
+            
             <br/>
             <p class="endereco">Endereço</p>
             <input id="endereco" type="text" placeholder="Endereço"/><br/><br/>
             <p class="endereco">Seu nome </p>
             <input id="endereco" type="text" placeholder="seu nome"/>
             <br/>
-            <button id="finalizar">Enviar pedio</button>
+            <button id="finalizar" onclick='sendPedido()'>Enviar pedio</button>
         </div>
         
     </section>

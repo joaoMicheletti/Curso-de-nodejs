@@ -186,25 +186,28 @@ h3 {
     width: 50%;
     height: 100px;
 }
-#showPedido {
-    width: 40%;
-    height: 45px;
-    margin-left: 30%;
-    margin-bottom: 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 600;
-    box-shadow: 5px 5px 10px rgba(189, 20, 133, 0.815);
-    
-}
-#verPedido {
-    display: none;
+
+.pedido {
     border-radius: 10px;
     width: 80%;
     margin-left: 10%;
     background-color: #e6c37ccb;
     height: auto;
+}
+#divTradBranco{
+    display: none;
+}
+#divTradAoLeite {
+    display: none;
+}
+#divOvoDeColher{
+    display: none;
+}
+#divOvoTrufado {
+    display: none;
+}
+#pedidosContainer #divOvoColher{
+    color:#d4486f;
 }
 #CbiaPascoa {
     text-align: center;
