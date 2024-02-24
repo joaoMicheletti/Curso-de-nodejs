@@ -168,11 +168,11 @@
                 elemento.style.display = 'block';
                 document.querySelector("#_colher").innerHTML = `${responseOvoColher.title}`
                 document.querySelector('#_gramas_colher').innerHTML = `* Ovos de:  ${responseOvoColher.gramasInstance}`;
-                document.querySelector('#_chocolate_colher').innerHTML = `* Tipo de Chocolate :  ${responseOvoColher.saborInsttance}`;
+                document.querySelector('#_chocolate_colher').innerHTML = `* Tipo de Chocolate :  ${responseOvoColher.selecioneChocolate}`;
                 document.querySelector('#_sabor_colher').innerHTML = `* Recheio Sabor :  ${responseOvoColher.saborInsttance}`;
                 document.querySelector('#_quantidade_colher').innerHTML = `* Quantidade :  ${responseOvoColher.quanttidadeInstance}`;
                 document.querySelector('#_obs_colher').innerHTML = `* OBS-PEDIDO :  ${responseOvoColher.obs}`;
-                document.querySelector('#_valor_colher').innerHTML = `* VALOR R$: ${responseTradicionalBranco.tot}`
+                document.querySelector('#_valor_colher').innerHTML = `* VALOR R$: ${responseOvoColher.tot}`
             };
         };
         
@@ -208,8 +208,8 @@
             } else if(quantidade <= 0 ){
                 alert('Defina uma Quantidade Valida!');
             } else {
-                var total = trufadoObject[gramasInstance] * quantidade;
-                document.querySelector("#totTrufado").innerHTML = `R$ ${total.toFixed(2)}`;
+                var tot = trufadoObject[gramasInstance] * quantidade;
+                document.querySelector("#totTrufado").innerHTML = `R$ ${tot.toFixed(2)}`;
                 var pedidoTrufado = {
                     title: "#PRODUTO:# - Ovo Trufado",
                     gramasInstance,
@@ -234,7 +234,7 @@
                 document.querySelector('#_sabor2_trufado').innerHTML = `* banda 2 Recheio sabor :  ${responseOvoTrufado.sabor2}`;
                 document.querySelector('#_quantidade_trufado').innerHTML = `* Quantidade : ${responseOvoTrufado.quantidade}`;
                 document.querySelector("#_obs_trufado").innerHTML = `* OBS-PEDIDO : ${responseOvoTrufado.obs}`;
-                document.querySelector('#_valor_trufado').innerHTML = `* VALOR: ${responseTradicionalBranco.tot}`
+                document.querySelector('#_valor_trufado').innerHTML = `* VALOR: ${responseOvoTrufado.tot}`
             };
         };
         //refazer pedido
@@ -244,17 +244,59 @@
 
         function sendPedido(){
             // responseOvoColher responseOvoTrufado responseTradicionalAoleite responseTradicionalBranco
-            if(responseOvoColher.gramasInstance === undefined || responseOvoTrufado.gramasInstance === undefined || responseTradicionalAoleite.gramasInstance === undefined || responseTradicionalBranco.gramasInstance === undefined){
-                alert('Seu pedido não foi encrontrado!');                
-            }else {
-                var Data = {
-                    responseTradicionalBranco,
-                    responseTradicionalAoleite,
-                    responseOvoColher,
-                    responseOvoTrufado,
-                };
-                console.log(Data);
-            }
+           var endereco = document.querySelector("#endereco").value;
+           var nome = document.querySelector("#nome").value;
+           if(endereco === ''){
+            alert('Preencha o Campo "Endereço"!!!');
+           } else if(nome === ''){
+            alert("Preencha o Campo 'Seu Nome'!!!");
+           } else if(responseTradicionalBranco.gramasInstance === undefined && responseTradicionalAoleite.gramasInstance === undefined &&  responseOvoColher.gramasInstance === undefined && responseOvoTrufado.gramasInstance === undefined){
+            alert("Nenhum pedido Emcontrado!!!");
+            location.reload(true);
+           }
+
+           var pedidoBranco = `${responseTradicionalBranco.title}\nOVOS DE:______${responseTradicionalBranco.gramasInstance}\nQANTIDADE:_____${responseTradicionalBranco.quanttidadeInstance}\nVALOR:_____${responseTradicionalBranco.tot}\n\n`;
+           var pedidoAoLeite = `${responseTradicionalAoleite.title}\nOVOS DE:_____${responseTradicionalAoleite.gramasInstance}\nQUANTIDADE:_____${responseTradicionalAoleite.quanttidadeInstance}\nVALOR:_____${responseTradicionalAoleite.tot}\n\n`;
+           var pedidoColher = `${responseOvoColher.title}\nOVOS DE:_____${responseOvoColher.gramasInstance}\nCHOCOLATE:_____${responseOvoColher.selecioneChocolate}\nSABOR:_____${responseOvoColher.saborInsttance}\nQUANTIDADE:_____${responseOvoColher.quanttidadeInstance}\nOBS:_____${responseOvoColher.obs}\nTOTAL:_____${responseOvoColher.tot}\n\n`;
+           var pedidoTrufado = `${responseOvoTrufado.title}\nOVOS DE:_____${responseOvoTrufado.gramasInstance}\nCHOCOLATE BANDA 1:_____${responseOvoTrufado.banda1}\n$BANDA 1 SABOR:_____${responseOvoTrufado.sabor1}\nCHOCOLATE BANDA 2:_____${responseOvoTrufado.banda2}\nBANDA 2 SABOR:_____${responseOvoTrufado.sabor2}\nQUANTIDADE:_____${responseOvoTrufado.quantidade}\nOBS:_____${responseOvoTrufado.obs}\nVALOR:_____${responseOvoTrufado.tot}\n\n`;
+           var msg = ``;
+           //caso tenha o pedido;
+           if(responseTradicionalBranco.gramasInstance === undefined){
+            console.log("undefined");
+           } else {
+            msg +=pedidoBranco
+           };
+           if(responseTradicionalAoleite.gramasInstance === undefined){
+            console.log(undefined);
+        }else{
+            msg += pedidoAoLeite;
+           };
+           if(responseOvoColher.gramasInstance === undefined){
+            console.log(undefined);
+        }else{
+            msg += pedidoColher;
+           };
+           if(responseOvoTrufado.gramasInstance === undefined){
+            console.log(undefined);
+        }else{
+            msg += pedidoTrufado;
+           };
+           var cliente = `\n\nCLIENTE:_____${nome}\nENDEREÇO:_____${endereco}\n\n`
+           msg+= cliente;
+
+           // Mensagem com quebras de linha
+            //var mensagem = titulo
+
+            // Substitua '\n' por '%0A', que é a codificação para quebra de linha em URLs
+            //var mensagemFormatada = mensagem.replace(/\n/g, '%0A');
+            // Codificar a mensagem para uso em uma URL
+            var msgEncoded = encodeURIComponent(msg);
+
+            var linkWhatsApp = "https://api.whatsapp.com/send?phone=5511992650095&text=" + msgEncoded;
+
+            // Abra o link em uma nova janela ou redirecione para ele
+            window.open(linkWhatsApp, '_blank');
+
         };
         
     </script>
@@ -562,9 +604,9 @@
             
             <br/>
             <p class="endereco">Endereço</p>
-            <input id="endereco" type="text" placeholder="Endereço"/><br/><br/>
+            <input id="endereco" class="envio" type="text" placeholder="Endereço"/><br/><br/>
             <p class="endereco">Seu nome </p>
-            <input id="endereco" type="text" placeholder="seu nome"/>
+            <input id="nome" class="envio" type="text" placeholder="seu nome"/>
             <br/>
             <button id="finalizar" onclick='sendPedido()'>Enviar pedio</button>
         </div>
