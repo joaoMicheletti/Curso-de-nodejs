@@ -5,9 +5,9 @@ var valorInt = parseInt(reple);
 let slideIndex = 0;
 var num = 0;
 if(valorInt > 800){
-  num = 6;
-} else if(valorInt < 480){
-  num = 12;
+  num = 5;
+} else if(valorInt < 550){
+  num = 14;
 };
 
 function moveSlide(n) {
@@ -20,6 +20,6 @@ function moveSlide(n) {
   if (slideIndex < 0) {
     slideIndex = slides.length - 1;
   }
-  const translateValue = -slideIndex * 100;
+  const translateValue = -slideIndex * 90;
   document.querySelector('.carousel-inner').style.transform = `translateX(${translateValue}%)`;
 }
