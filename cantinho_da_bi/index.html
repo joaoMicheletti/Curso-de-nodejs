@@ -53,10 +53,9 @@
         var responseTradicionalBranco = {};
         function valorTradBranco(){
             var brancoObject = {
-            '250g': 35,
-            '350g': 45,
-            '500g': 57,
-            '1kilo': 98
+            '350g': 55,
+            '500g': 65,
+            '1kilo': 100
             };
 
             var gramasInstance = document.querySelector('#gramasChocolateBrano').value;
@@ -89,10 +88,9 @@
         var responseTradicionalAoleite = {};
         function valorTradLeite(){
             var aoLeiteObject = {
-            '250g': 32,
-            '350g': 45,
-            '500g': 57,
-            '1kilo': 95
+            '350g': 55,
+            '500g': 65,
+            '1kilo': 100
             };           
 
             var gramasInstance = document.querySelector('#chocoAoLeite').value;
@@ -189,10 +187,9 @@
             var obs = document.querySelector("#obsTrufado").value;
             console.log(gramasInstance, banda1, banda2, sabor1, sabor2, quantidade, obs);
             var trufadoObject = {
-            '250g': 55,
-            '350g': 60,
-            '500g': 75,
-            '1kilo': 120
+            '350g': 65,
+            '500g': 78,
+            '1kilo': 125
             };    
             
             if(gramasInstance === 'Selecione'){
@@ -381,21 +378,8 @@
               <img src="image/12.jpg" alt="Imagem 12">
               <img src="image/13.jpg" alt="Imagem 13">
               <img src="image/14.jpg" alt="Imagem 14">
-              <img src="image/15.jpg" alt="Imagem 15">
-              <img src="image/16.jpg" alt="Imagem 16">
               <img src="image/19.jpg" alt="Imagem 19">
               <img src="image/20.jpg" alt="Imagem 20">
-              <img src="image/21.jpg" alt="Imagem 21">
-              <img src="image/22.jpg" alt="Imagem 22">
-              <img src="image/23.jpg" alt="Imagem 23">
-              <img src="image/24.jpg" alt="Imagem 24">
-              <img src="image/27.jpg" alt="Imagem 27">
-              <img src="image/28.jpg" alt="Imagem 28">
-              <img src="image/29.jpg" alt="Imagem 29">
-              <img src="image/31.jpg" alt="Imagem 31">
-              <img src="image/32.jpg" alt="Imagem 32">
-              <img src="image/33.jpg" alt="Imagem 33">
-              <img src="image/34.jpg" alt="Imagem 34">
             </div>
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -512,7 +496,6 @@
                         <p>Peso em Gramas</p>
                         <select id="gramasTrufado" class="gramas">
                             <option value="Selecione">Selecione</option>
-                            <option value="250g">250g</option>
                             <option value="350g">350g</option>
                             <option value="500g">500g</option>
                             <option value="1kilo">1kilo</option>    
