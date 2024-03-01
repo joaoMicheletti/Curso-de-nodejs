@@ -55,7 +55,7 @@
             var brancoObject = {
             '350g': 55,
             '500g': 65,
-            '1kilo': 100
+            '1kilo': 120
             };
 
             var gramasInstance = document.querySelector('#gramasChocolateBrano').value;
@@ -88,9 +88,9 @@
         var responseTradicionalAoleite = {};
         function valorTradLeite(){
             var aoLeiteObject = {
-            '350g': 55,
-            '500g': 65,
-            '1kilo': 100
+            '350g': 50,
+            '500g': 60,
+            '1kilo': 110
             };           
 
             var gramasInstance = document.querySelector('#chocoAoLeite').value;
@@ -380,6 +380,16 @@
               <img src="image/14.jpg" alt="Imagem 14">
               <img src="image/19.jpg" alt="Imagem 19">
               <img src="image/20.jpg" alt="Imagem 20">
+              <img src="image/22.jpeg" alt="Imagem 20">
+              <img src="image/23.jpeg" alt="Imagem 20">
+              <img src="image/24.jpeg" alt="Imagem 20">
+              <img src="image/25.jpeg" alt="Imagem 20">
+              <img src="image/26.jpeg" alt="Imagem 20">
+              <img src="image/27.jpeg" alt="Imagem 20">
+              <img src="image/28.jpeg" alt="Imagem 20">
+              <img src="image/29.jpeg" alt="Imagem 20">
+              <img src="image/30.jpeg" alt="Imagem 20">
+              <img src="image/31.jpeg" alt="Imagem 20">
             </div>
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -405,7 +415,6 @@
                         <p>Peso em Gramas</p>
                         <select id="gramasChocolateBrano" class="gramas">
                             <option value="Selecione">Selecione</option>
-                            <option value="250g">250g</option>
                             <option value="350g">350g</option>
                             <option value="500g">500g</option>
                             <option value="1kilo">1kilo</option>    
@@ -428,7 +437,6 @@
                         <p>Peso em Gramas</p>
                         <select id="chocoAoLeite" class="gramas">
                             <option value="Selecione">Selecione</option>
-                            <option value="250g">250g</option>
                             <option value="350g">350g</option>
                             <option value="500g">500g</option>
                             <option value="1kilo">1kilo</option>    
@@ -506,12 +514,6 @@
                             <option value="ao_Leite">Chocolate ao Leite</option>
                             <option value="Branco">Cocolate Branco</option>    
                         </select>
-                        <p>Banda 2</p>
-                        <select id="bandaTwo" class="gramas">
-                            <option value="Selecione">Selecione o chocolate</option>
-                            <option value="ao_Leite">Chocolate ao Leite</option>
-                            <option value="Branco">Cocolate Branco</option>    
-                        </select>
                         <p>Sabor 1</p>
                         <select id="selectSaborTrufadoOne" class="gramas">
                             <option value="Selecione">Selecione</option>
@@ -525,6 +527,12 @@
                             <option value="Maracujá">Maracujá</option>
                             <option value="Morango">Morango</option>
                             <option value="Ninnho_com_Nutella">Ninnho_com_Nutella</option>
+                        </select>
+                        <p>Banda 2</p>
+                        <select id="bandaTwo" class="gramas">
+                            <option value="Selecione">Selecione o chocolate</option>
+                            <option value="ao_Leite">Chocolate ao Leite</option>
+                            <option value="Branco">Cocolate Branco</option>    
                         </select>
                         <p>Sabor 2</p>
                         <select id="selectSaborTrufadoTwo" class="gramas">
