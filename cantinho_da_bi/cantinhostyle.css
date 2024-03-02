@@ -166,7 +166,7 @@ h3 {
     box-shadow: 5px 5px 10px rgba(189, 20, 133, 0.815);
     cursor: pointer;    
 }
-#chocolateBranco, #aoLeite, #colher, #trufado {
+#kit, #chocolateBranco, #aoLeite, #colher, #trufado {
     display: none;
     width: 80%;
     margin-left: 10%;
@@ -193,6 +193,9 @@ h3 {
     margin-left: 10%;
     background-color: #e6c37ccb;
     height: auto;
+}
+#KitPedido{
+    display: none;
 }
 #divTradBranco{
     display: none;

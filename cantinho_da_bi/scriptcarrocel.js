@@ -7,7 +7,7 @@ var num = 0;
 if(valorInt > 800){
   num = 5;
 } else if(valorInt < 550){
-  num = 14;
+  num = 15;
 };
 
 function moveSlide(n) {

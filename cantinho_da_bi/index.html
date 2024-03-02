@@ -11,6 +11,15 @@
         };
     </script>
     <script>
+        function Confeiteiro(){
+            var elemento = document.querySelector('#kit');
+            var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+            if(displayAtual === 'none'){
+                elemento.style.display = 'block';
+            } else {
+                elemento.style.display = 'none';
+            }            
+        };
         function brannco(){
             var elemento = document.querySelector('#chocolateBranco');
             var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
@@ -47,6 +56,33 @@
             } else {
                 elemento.style.display = 'none';
             }
+        };
+        //kit confeiteiro;
+        var responseKit = '';
+        function valorKit(){
+            var valor = 45;
+            var quanttidadeInstance = document.querySelector("#kit > .quantidade").value;
+
+            if(quanttidadeInstance <= 0){
+                alert('Defina uma quantidade Valida!!!');
+            } else {
+                var tot = valor * quanttidadeInstance;
+                document.querySelector("#totKit").innerHTML = ` R$ : ${tot.toFixed(2)}`;
+                var pedidokit = {
+                    title: '#PRODUTO:# - Kit Confeiteiro',
+                    quanttidadeInstance,
+                    tot                   
+                };
+                responseKit = pedidokit;
+                var elemento = document.querySelector('#KitPedido');
+                console.log(elemento);
+                var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+                console.log(displayAtual);
+                elemento.style.display = 'block';
+                document.querySelector('#_kit').innerHTML =`${responseKit.title}`;
+                document.querySelector('#_quantidade_kit').innerHTML =` * Quantiade : ${responseKit.quanttidadeInstance}`;
+                document.querySelector('#_valor_kit').innerHTML = ` * VALOR R$: ${responseKit.tot}`  
+            };
         };
 
         //pedido ovo trad branco
@@ -132,6 +168,7 @@
 
             var gramasInstance = document.querySelector('#ovoColher').value;
             var selecioneChocolate = document.querySelector('#bandaColher').value
+            var formato = document.querySelector("#formato").value;
             var saborInsttance = document.querySelector('#selectSaborColher').value;
             var quanttidadeInstance = document.querySelector("#colher > .quantidade").value;
             var obs = document.querySelector('#obsColher').value;
@@ -141,36 +178,74 @@
                 alert('Selecione a gramatura do ovo!!!')
             } else if(selecioneChocolate === 'Selecione'){
                 alert('Selecione o chocolate!')
-
+            }else if(formato === 'Selecione'){
+                alert("Selecione um formato");
             } else if(saborInsttance === "Selecione"){
                 alert("sellecione um sabor");
-
             } else if(quanttidadeInstance <= 0){
                 alert('Defina uma quantidade Valida!!!');
             } else {
-                var tot = colherObject[gramasInstance] * quanttidadeInstance;
-                document.querySelector("#totColher").innerHTML = ` R$ : ${tot.toFixed(2)}`;
-                var pedidoColher = {
-                    title: "#PRODUTO:# - Ovo de Colher",
-                    gramasInstance, 
-                    saborInsttance, 
-                    selecioneChocolate, 
-                    quanttidadeInstance, 
-                    obs,
-                    tot
+                if(formato === 'Coração'){
+                    console.log(gramasInstance)
+                    if(gramasInstance === '350g'){
+                        var tot = colherObject[gramasInstance] * quanttidadeInstance;
+                        document.querySelector("#totColher").innerHTML = ` R$ : ${tot.toFixed(2)}`;
+                        var pedidoColher = {
+                            title: "#PRODUTO:# - Ovo de Colher",
+                            gramasInstance, 
+                            saborInsttance,
+                            formato,
+                            selecioneChocolate, 
+                            quanttidadeInstance, 
+                            obs,
+                            tot
+                        };
+                        console.log(pedidoColher);
+                        responseOvoColher = pedidoColher
+                        //ovo de colher 
+                        var elemento = document.querySelector('#divOvoDeColher');
+                        var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+                        elemento.style.display = 'block';
+                        document.querySelector("#_colher").innerHTML = `${responseOvoColher.title}`
+                        document.querySelector('#_gramas_colher').innerHTML = `* Ovos de:  ${responseOvoColher.gramasInstance}`;
+                        document.querySelector('#_chocolate_colher').innerHTML = `* Tipo de Chocolate :  ${responseOvoColher.selecioneChocolate}`;
+                        document.querySelector('#_formato_colhere').innerHTML = `* Formato de : ${responseOvoColher.formato}`;
+                        document.querySelector('#_sabor_colher').innerHTML = `* Recheio Sabor :  ${responseOvoColher.saborInsttance}`;
+                        document.querySelector('#_quantidade_colher').innerHTML = `* Quantidade :  ${responseOvoColher.quanttidadeInstance}`;
+                        document.querySelector('#_obs_colher').innerHTML = `* OBS-PEDIDO :  ${responseOvoColher.obs}`;
+                        document.querySelector('#_valor_colher').innerHTML = `* VALOR R$: ${responseOvoColher.tot}`
+                    } else {
+                        alert("OVOS no Formato de Coração Diponíveis Somente em 350gramas!");
+                        location.reload(true)
+                    };
+                } else{
+                    var tot = colherObject[gramasInstance] * quanttidadeInstance;
+                    document.querySelector("#totColher").innerHTML = ` R$ : ${tot.toFixed(2)}`;
+                    var pedidoColher = {
+                        title: "#PRODUTO:# - Ovo de Colher",
+                        gramasInstance, 
+                        saborInsttance,
+                        formato,
+                        selecioneChocolate, 
+                        quanttidadeInstance, 
+                        obs,
+                        tot
+                    };
+                    console.log(pedidoColher);
+                    responseOvoColher = pedidoColher
+                    //ovo de colher 
+                    var elemento = document.querySelector('#divOvoDeColher');
+                    var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
+                    elemento.style.display = 'block';
+                    document.querySelector("#_colher").innerHTML = `${responseOvoColher.title}`
+                    document.querySelector('#_gramas_colher').innerHTML = `* Ovos de:  ${responseOvoColher.gramasInstance}`;
+                    document.querySelector('#_chocolate_colher').innerHTML = `* Tipo de Chocolate :  ${responseOvoColher.selecioneChocolate}`;
+                    document.querySelector('#_formato_colhere').innerHTML = `* Formato de : ${responseOvoColher.formato}`;
+                    document.querySelector('#_sabor_colher').innerHTML = `* Recheio Sabor :  ${responseOvoColher.saborInsttance}`;
+                    document.querySelector('#_quantidade_colher').innerHTML = `* Quantidade :  ${responseOvoColher.quanttidadeInstance}`;
+                    document.querySelector('#_obs_colher').innerHTML = `* OBS-PEDIDO :  ${responseOvoColher.obs}`;
+                    document.querySelector('#_valor_colher').innerHTML = `* VALOR R$: ${responseOvoColher.tot}`
                 };
-                responseOvoColher = pedidoColher
-                //ovo de colher 
-                var elemento = document.querySelector('#divOvoDeColher');
-                var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
-                elemento.style.display = 'block';
-                document.querySelector("#_colher").innerHTML = `${responseOvoColher.title}`
-                document.querySelector('#_gramas_colher').innerHTML = `* Ovos de:  ${responseOvoColher.gramasInstance}`;
-                document.querySelector('#_chocolate_colher').innerHTML = `* Tipo de Chocolate :  ${responseOvoColher.selecioneChocolate}`;
-                document.querySelector('#_sabor_colher').innerHTML = `* Recheio Sabor :  ${responseOvoColher.saborInsttance}`;
-                document.querySelector('#_quantidade_colher').innerHTML = `* Quantidade :  ${responseOvoColher.quanttidadeInstance}`;
-                document.querySelector('#_obs_colher').innerHTML = `* OBS-PEDIDO :  ${responseOvoColher.obs}`;
-                document.querySelector('#_valor_colher').innerHTML = `* VALOR R$: ${responseOvoColher.tot}`
             };
         };
         
@@ -247,17 +322,22 @@
             alert('Preencha o Campo "Endereço"!!!');
            } else if(nome === ''){
             alert("Preencha o Campo 'Seu Nome'!!!");
-           } else if(responseTradicionalBranco.gramasInstance === undefined && responseTradicionalAoleite.gramasInstance === undefined &&  responseOvoColher.gramasInstance === undefined && responseOvoTrufado.gramasInstance === undefined){
+           } else if(responseKit.quanttidadeInstance === undefined && responseTradicionalBranco.gramasInstance === undefined && responseTradicionalAoleite.gramasInstance === undefined &&  responseOvoColher.gramasInstance === undefined && responseOvoTrufado.gramasInstance === undefined){
             alert("Nenhum pedido Emcontrado!!!");
             location.reload(true);
            }
-
+           var pedidokitConfeiteiro = `${responseKit.title}\n QUANTIDADE:_____ ${responseKit.quanttidadeInstance}\n VALOR:_____ ${responseKit.tot}\n Quais os temas Disponíveis ???\n`;
            var pedidoBranco = `${responseTradicionalBranco.title}\nOVOS DE:______${responseTradicionalBranco.gramasInstance}\nQANTIDADE:_____${responseTradicionalBranco.quanttidadeInstance}\nVALOR:_____${responseTradicionalBranco.tot}\n\n`;
            var pedidoAoLeite = `${responseTradicionalAoleite.title}\nOVOS DE:_____${responseTradicionalAoleite.gramasInstance}\nQUANTIDADE:_____${responseTradicionalAoleite.quanttidadeInstance}\nVALOR:_____${responseTradicionalAoleite.tot}\n\n`;
-           var pedidoColher = `${responseOvoColher.title}\nOVOS DE:_____${responseOvoColher.gramasInstance}\nCHOCOLATE:_____${responseOvoColher.selecioneChocolate}\nSABOR:_____${responseOvoColher.saborInsttance}\nQUANTIDADE:_____${responseOvoColher.quanttidadeInstance}\nOBS:_____${responseOvoColher.obs}\nTOTAL:_____${responseOvoColher.tot}\n\n`;
+           var pedidoColher = `${responseOvoColher.title}\nOVOS DE:_____${responseOvoColher.gramasInstance}\n FORMA DE:_____ ${responseOvoColher.formato}\nCHOCOLATE:_____${responseOvoColher.selecioneChocolate}\nSABOR:_____${responseOvoColher.saborInsttance}\nQUANTIDADE:_____${responseOvoColher.quanttidadeInstance}\nOBS:_____${responseOvoColher.obs}\nTOTAL:_____${responseOvoColher.tot}\n\n`;
            var pedidoTrufado = `${responseOvoTrufado.title}\nOVOS DE:_____${responseOvoTrufado.gramasInstance}\nCHOCOLATE BANDA 1:_____${responseOvoTrufado.banda1}\nBANDA 1 SABOR:_____${responseOvoTrufado.sabor1}\nCHOCOLATE BANDA 2:_____${responseOvoTrufado.banda2}\nBANDA 2 SABOR:_____${responseOvoTrufado.sabor2}\nQUANTIDADE:_____${responseOvoTrufado.quantidade}\nOBS:_____${responseOvoTrufado.obs}\nVALOR:_____${responseOvoTrufado.tot}\n\n`;
            var msg = ``;
            //caso tenha o pedido;
+           if(responseKit.quanttidadeInstance === undefined){
+            console.log(undefined);
+           }else{
+            msg += pedidokitConfeiteiro;
+           };
            if(responseTradicionalBranco.gramasInstance === undefined){
             console.log("undefined");
            } else {
@@ -408,6 +488,22 @@
         <div id="pedidosContainer">
             <h3>Faça seu pedido.</h3>
             <div class="pedidoCategoria">
+                <div  class="kitConfeiteiro">
+                    <button onclick="Confeiteiro()" class="separador" >Kit Confeiteiro</button>
+                    <div id="kit">
+                        <br/>
+                        <p>Consultar com a loja os temas diponíveis após realizar o pedido</p><br/>
+                        <p>Preço : R$ 45,00</p>
+                        <br/>
+                        <p>Quantidade</p>
+                        <input class="quantidade" type="number" >
+                        <br/>
+                        <br/>
+                        <button class="valor" onclick="valorKit()">Consultar Valor</button>
+                        <br/><br/>
+                        <p  id="totKit">Valor: R$ </p>
+                    </div>
+                </div>
                 <div  class="brancoTrad">
                     <button onclick="brannco()" class="separador" >Tradicional Chocolate Branco</button>
                     <div id="chocolateBranco">
@@ -468,6 +564,13 @@
                             <option value="Selecione">Selecione o chocolate</option>
                             <option value="ao_Leite">Chocolate ao Leite</option>
                             <option value="Branco">Cocolate Branco</option>    
+                        </select>
+                        <p>Formato</p>
+                        <p>OBS: Formato de Coração Disponível só em 350Gramas</p>
+                        <select id="formato" class="gramas">
+                            <option value="Selecione">Selecione o formato</option>
+                            <option value="OVO">Ovo</option>
+                            <option value="Coração">Coração</option>    
                         </select>
                         <p>Sabores</p>
                         <select id="selectSaborColher" class="gramas">
@@ -570,6 +673,13 @@
             <br/>
             
             <p id="CbiaPascoa">Meu Pedido</p>
+
+            <div id="KitPedido"  class="pedido">
+                <p id="_kit" class="title">.</p>
+                <p id="_quantidade_kit" class="more">.</p>
+                <p id="_valor_kit" class="more">.</p>
+                <hr/>
+            </div> 
                 
             <div id="divTradBranco" class="pedido">
                 <p id="_branco" class="title">.</p>
@@ -589,6 +699,7 @@
                 <p id="_colher" class="title">.</p>
                 <p id="_gramas_colher" class="more">.</p>
                 <p id="_chocolate_colher" class="more">.</p>
+                <p id="_formato_colhere" class="more">.</p>
                 <p id="_sabor_colher" class="more">.</p>
                 <p id="_quantidade_colher" class="more">.</p>
                 <p id="_valor_colher" class="more">.</p>
