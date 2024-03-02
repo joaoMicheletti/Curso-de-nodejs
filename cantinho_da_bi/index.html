@@ -320,8 +320,10 @@
            var nome = document.querySelector("#nome").value;
            if(endereco === ''){
             alert('Preencha o Campo "Endereço"!!!');
+            location.reload(true);
            } else if(nome === ''){
             alert("Preencha o Campo 'Seu Nome'!!!");
+            location.reload(true);
            } else if(responseKit.quanttidadeInstance === undefined && responseTradicionalBranco.gramasInstance === undefined && responseTradicionalAoleite.gramasInstance === undefined &&  responseOvoColher.gramasInstance === undefined && responseOvoTrufado.gramasInstance === undefined){
             alert("Nenhum pedido Emcontrado!!!");
             location.reload(true);
