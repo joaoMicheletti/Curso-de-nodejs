@@ -140,7 +140,7 @@
                 var tot = aoLeiteObject[gramasInstance] * quanttidadeInstance;
                 document.querySelector("#totLeite").innerHTML = ` R$ : ${tot.toFixed(2)}`;
                 var pedidoTradAoLeite = {
-                    title: '#PRODUTO:# - Ovo TTradicinal ao Leite',
+                    title: '#PRODUTO:# - Ovo Tradicinal ao Leite',
                     gramasInstance,
                     quanttidadeInstance,
                     tot,
@@ -274,7 +274,7 @@
             } else if(banda1 === 'Selecione'){
                 alert('Selecione O Chocolate da Banda 1!!!');
             } else if(banda2 === 'Selecione'){
-                alert('Selecione o Chjocolatre da banda 2!!!');
+                alert('Selecione o Chocolate da banda 2!!!');
             } else if(sabor1 === 'Selecione'){
                 alert('Selecione o sabor do lado 1');
             } else if(sabor2 === 'Selecione'){
@@ -329,55 +329,56 @@
            } else if(responseKit.quanttidadeInstance === undefined && responseTradicionalBranco.gramasInstance === undefined && responseTradicionalAoleite.gramasInstance === undefined &&  responseOvoColher.gramasInstance === undefined && responseOvoTrufado.gramasInstance === undefined){
             alert("Nenhum pedido Emcontrado!!!");
             //location.reload(true);
-           }
-           var pedidokitConfeiteiro = `${responseKit.title}\n QUANTIDADE:_____ ${responseKit.quanttidadeInstance}\n VALOR:_____ ${responseKit.tot}\n Quais os temas Disponíveis ???\n`;
-           var pedidoBranco = `${responseTradicionalBranco.title}\nOVOS DE:______${responseTradicionalBranco.gramasInstance}\nQANTIDADE:_____${responseTradicionalBranco.quanttidadeInstance}\nVALOR:_____${responseTradicionalBranco.tot}\n\n`;
-           var pedidoAoLeite = `${responseTradicionalAoleite.title}\nOVOS DE:_____${responseTradicionalAoleite.gramasInstance}\nQUANTIDADE:_____${responseTradicionalAoleite.quanttidadeInstance}\nVALOR:_____${responseTradicionalAoleite.tot}\n`;
-           var pedidoColher = `${responseOvoColher.title}\nOVOS DE:_____${responseOvoColher.gramasInstance}\n FORMA DE:_____ ${responseOvoColher.formato}\nCHOCOLATE:_____${responseOvoColher.selecioneChocolate}\nSABOR:_____${responseOvoColher.saborInsttance}\nQUANTIDADE:_____${responseOvoColher.quanttidadeInstance}\nOBS:_____${responseOvoColher.obs}\nTOTAL:_____${responseOvoColher.tot}\n\n`;
-           var pedidoTrufado = `${responseOvoTrufado.title}\nOVOS DE:_____${responseOvoTrufado.gramasInstance}\nCHOCOLATE BANDA 1:_____${responseOvoTrufado.banda1}\nBANDA 1 SABOR:_____${responseOvoTrufado.sabor1}\nCHOCOLATE BANDA 2:_____${responseOvoTrufado.banda2}\nBANDA 2 SABOR:_____${responseOvoTrufado.sabor2}\nQUANTIDADE:_____${responseOvoTrufado.quantidade}\nOBS:_____${responseOvoTrufado.obs}\nVALOR:_____${responseOvoTrufado.tot}\n\n`;
-           var msg = ``;
-           //caso tenha o pedido;
-           if(responseKit.quanttidadeInstance === undefined){
-            console.log(undefined);
-           }else{
-            msg += pedidokitConfeiteiro;
-           };
-           if(responseTradicionalBranco.gramasInstance === undefined){
-            console.log("undefined");
-           } else {
-            msg +=pedidoBranco
-           };
-           if(responseTradicionalAoleite.gramasInstance === undefined){
-            console.log(undefined);
-        }else{
-            msg += pedidoAoLeite;
-           };
-           if(responseOvoColher.gramasInstance === undefined){
-            console.log(undefined);
-        }else{
-            msg += pedidoColher;
-           };
-           if(responseOvoTrufado.gramasInstance === undefined){
-            console.log(undefined);
-        }else{
-            msg += pedidoTrufado;
-           };
-           var cliente = `\n\nCLIENTE:_____${nome}\nENDEREÇO:_____${endereco}\n\n`
-           msg+= cliente;
+           } else{
+            var pedidokitConfeiteiro = `${responseKit.title}\n QUANTIDADE:_____ ${responseKit.quanttidadeInstance}\n VALOR:_____ ${responseKit.tot}\n Quais os temas Disponíveis ???\n`;
+            var pedidoBranco = `${responseTradicionalBranco.title}\nOVOS DE:______${responseTradicionalBranco.gramasInstance}\nQANTIDADE:_____${responseTradicionalBranco.quanttidadeInstance}\nVALOR:_____${responseTradicionalBranco.tot}\n\n`;
+            var pedidoAoLeite = `${responseTradicionalAoleite.title}\nOVOS DE:_____${responseTradicionalAoleite.gramasInstance}\nQUANTIDADE:_____${responseTradicionalAoleite.quanttidadeInstance}\nVALOR:_____${responseTradicionalAoleite.tot}\n`;
+            var pedidoColher = `${responseOvoColher.title}\nOVOS DE:_____${responseOvoColher.gramasInstance}\n FORMA DE:_____ ${responseOvoColher.formato}\nCHOCOLATE:_____${responseOvoColher.selecioneChocolate}\nSABOR:_____${responseOvoColher.saborInsttance}\nQUANTIDADE:_____${responseOvoColher.quanttidadeInstance}\nOBS:_____${responseOvoColher.obs}\nTOTAL:_____${responseOvoColher.tot}\n\n`;
+            var pedidoTrufado = `${responseOvoTrufado.title}\nOVOS DE:_____${responseOvoTrufado.gramasInstance}\nCHOCOLATE BANDA 1:_____${responseOvoTrufado.banda1}\nBANDA 1 SABOR:_____${responseOvoTrufado.sabor1}\nCHOCOLATE BANDA 2:_____${responseOvoTrufado.banda2}\nBANDA 2 SABOR:_____${responseOvoTrufado.sabor2}\nQUANTIDADE:_____${responseOvoTrufado.quantidade}\nOBS:_____${responseOvoTrufado.obs}\nVALOR:_____${responseOvoTrufado.tot}\n\n`;
+            var msg = ``;
+            //caso tenha o pedido;
+            if(responseKit.quanttidadeInstance === undefined){
+                console.log(undefined);
+            }else{
+                msg += pedidokitConfeiteiro;
+            };
+            if(responseTradicionalBranco.gramasInstance === undefined){
+                console.log("undefined");
+            } else {
+                msg +=pedidoBranco
+            };
+            if(responseTradicionalAoleite.gramasInstance === undefined){
+                console.log(undefined);
+            }else{
+                msg += pedidoAoLeite;
+            };
+            if(responseOvoColher.gramasInstance === undefined){
+                console.log(undefined);
+            }else{
+                msg += pedidoColher;
+            };
+            if(responseOvoTrufado.gramasInstance === undefined){
+                console.log(undefined);
+            }else{
+                msg += pedidoTrufado;
+            };
+            var cliente = `\n\nCLIENTE:_____${nome}\nENDEREÇO:_____${endereco}\n\n`
+            msg+= cliente;
 
-           // Mensagem com quebras de linha
-            //var mensagem = titulo
+            // Mensagem com quebras de linha
+                //var mensagem = titulo
 
-            // Substitua '\n' por '%0A', que é a codificação para quebra de linha em URLs
-            //var mensagemFormatada = mensagem.replace(/\n/g, '%0A');
-            // Codificar a mensagem para uso em uma URL
-            var msgEncoded = encodeURIComponent(msg);
+                // Substitua '\n' por '%0A', que é a codificação para quebra de linha em URLs
+                //var mensagemFormatada = mensagem.replace(/\n/g, '%0A');
+                // Codificar a mensagem para uso em uma URL
+                var msgEncoded = encodeURIComponent(msg);
 
-            var linkWhatsApp = "https://api.whatsapp.com/send?phone=5511992650095&text=" + msgEncoded;
+                var linkWhatsApp = "https://api.whatsapp.com/send?phone=5511992650095&text=" + msgEncoded;
 
-            // Abra o link em uma nova janela ou redirecione para ele
-            window.open(linkWhatsApp, '_blank');
-
+                // Abra o link em uma nova janela ou redirecione para ele
+                window.open(linkWhatsApp, '_blank');
+            }
+          
         };
         
     </script>
@@ -388,7 +389,7 @@
         <div id="nav">
             <a href="#Produtos">Preços</a>
             <a href="#produtos">Produtos</a>
-            <a href="#pedido">fazer pedido</a>
+            <a href="#pedido">Fazer Pedido!</a>
         </div>
     </header>
     <section id="Produtos">
@@ -596,7 +597,7 @@
                         <br/>
                         <p>OBS</p>
                         <input id="obsColher" class="obs" type="text" placeholder="OBS: Adicionais  R$ 6,00"/><br/><br/>
-                        <button onclick="valorColher()">Consultar Valot</button>
+                        <button onclick="valorColher()">Consultar Valor</button>
                         <p id="totColher">Valor: R$ </p>
                     </div>
                 </div>
@@ -659,7 +660,7 @@
                         <input id="Quantidade" class="quantidade" type="number" >
                         <br/><br/>
                         <input id="obsTrufado" class="obs" type="text" placeholder="OBS: Adicionais  R$ 6,00  #informar o lado que a obsrvação faz refeência."/><br/><br/>
-                        <button onclick="valorTrufado()">Consultar Valot</button>
+                        <button onclick="valorTrufado()">Consultar Valor</button>
                         <br/>
                         <br/>
                         <p id="totTrufado">Valor: R$ </p>
@@ -671,8 +672,9 @@
             <br/>
             <p>
                 OBS: o valor da entrega será
-                fornesido pela loja asim que 
-                ela receber o seu peddido
+                fornecido pela loja assim que 
+                ela receber o seu pedido.
+                Pedido Valido após pagamento de 50%.
             </p>
             <br/>
             
