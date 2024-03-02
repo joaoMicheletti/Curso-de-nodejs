@@ -145,6 +145,8 @@
                     quanttidadeInstance,
                     tot,
                 };
+                console.log(pedidoTradAoLeite.tot);
+                console.log(responseTradicionalAoleite.tot);
                 responseTradicionalAoleite = pedidoTradAoLeite;            
                 var elemento = document.querySelector("#divTradAoLeite");
                 var displayAtual = window.getComputedStyle(elemento).getPropertyValue('display');
@@ -153,7 +155,7 @@
                 document.querySelector('#_leite').innerHTML = `${responseTradicionalAoleite.title}`
                 document.querySelector('#_gramas_leite').innerHTML = `* Ovos de ${responseTradicionalAoleite.gramasInstance} `;
                 document.querySelector('#_quantidade_leite').innerHTML = `* Quantidade : ${responseTradicionalAoleite.quanttidadeInstance} `;
-                document.querySelector('#_valor_leite').innerHTML = `* VALOR R$: ${responseTradicionalBranco.tot}`
+                document.querySelector('#_valor_leite').innerHTML = `* VALOR R$: ${responseTradicionalAoleite.tot}`
             };
         };
         //pedido Ovo de Colher;
@@ -320,17 +322,17 @@
            var nome = document.querySelector("#nome").value;
            if(endereco === ''){
             alert('Preencha o Campo "Endereço"!!!');
-            location.reload(true);
+            //location.reload(true);
            } else if(nome === ''){
             alert("Preencha o Campo 'Seu Nome'!!!");
-            location.reload(true);
+            //location.reload(true);
            } else if(responseKit.quanttidadeInstance === undefined && responseTradicionalBranco.gramasInstance === undefined && responseTradicionalAoleite.gramasInstance === undefined &&  responseOvoColher.gramasInstance === undefined && responseOvoTrufado.gramasInstance === undefined){
             alert("Nenhum pedido Emcontrado!!!");
-            location.reload(true);
+            //location.reload(true);
            }
            var pedidokitConfeiteiro = `${responseKit.title}\n QUANTIDADE:_____ ${responseKit.quanttidadeInstance}\n VALOR:_____ ${responseKit.tot}\n Quais os temas Disponíveis ???\n`;
            var pedidoBranco = `${responseTradicionalBranco.title}\nOVOS DE:______${responseTradicionalBranco.gramasInstance}\nQANTIDADE:_____${responseTradicionalBranco.quanttidadeInstance}\nVALOR:_____${responseTradicionalBranco.tot}\n\n`;
-           var pedidoAoLeite = `${responseTradicionalAoleite.title}\nOVOS DE:_____${responseTradicionalAoleite.gramasInstance}\nQUANTIDADE:_____${responseTradicionalAoleite.quanttidadeInstance}\nVALOR:_____${responseTradicionalAoleite.tot}\n\n`;
+           var pedidoAoLeite = `${responseTradicionalAoleite.title}\nOVOS DE:_____${responseTradicionalAoleite.gramasInstance}\nQUANTIDADE:_____${responseTradicionalAoleite.quanttidadeInstance}\nVALOR:_____${responseTradicionalAoleite.tot}\n`;
            var pedidoColher = `${responseOvoColher.title}\nOVOS DE:_____${responseOvoColher.gramasInstance}\n FORMA DE:_____ ${responseOvoColher.formato}\nCHOCOLATE:_____${responseOvoColher.selecioneChocolate}\nSABOR:_____${responseOvoColher.saborInsttance}\nQUANTIDADE:_____${responseOvoColher.quanttidadeInstance}\nOBS:_____${responseOvoColher.obs}\nTOTAL:_____${responseOvoColher.tot}\n\n`;
            var pedidoTrufado = `${responseOvoTrufado.title}\nOVOS DE:_____${responseOvoTrufado.gramasInstance}\nCHOCOLATE BANDA 1:_____${responseOvoTrufado.banda1}\nBANDA 1 SABOR:_____${responseOvoTrufado.sabor1}\nCHOCOLATE BANDA 2:_____${responseOvoTrufado.banda2}\nBANDA 2 SABOR:_____${responseOvoTrufado.sabor2}\nQUANTIDADE:_____${responseOvoTrufado.quantidade}\nOBS:_____${responseOvoTrufado.obs}\nVALOR:_____${responseOvoTrufado.tot}\n\n`;
            var msg = ``;
