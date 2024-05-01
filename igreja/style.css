@@ -96,11 +96,11 @@ h2 {
 .slide-buttons {
     position: absolute;
     width: 90%;
-    max-width: calc(100% - 20px); /* Subtrai 20px para deixar espaço para as setas */
+    max-width: calc(100% - 30px); /* Subtrai 20px para deixar espaço para as setas */
     height: 10%;
     display: flex;
     justify-content: space-between;
-    top: -40%;
+    top: -10%;
     bottom: 0;
     margin: auto;
 }
