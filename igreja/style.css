@@ -94,12 +94,9 @@ h2 {
     text-align: center;
 }
 .slide-buttons {
-    position: absolute;
     width: 90%;
-    height: 10%;
     display: flex;
     justify-content: space-between;
-    top: 20%;
 }
 
 
