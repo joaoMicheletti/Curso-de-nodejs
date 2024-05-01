@@ -100,8 +100,6 @@ h2 {
     height: 10%;
     display: flex;
     justify-content: space-between;
-    top: -10%;
-    bottom: 0;
     margin: auto;
 }
 
