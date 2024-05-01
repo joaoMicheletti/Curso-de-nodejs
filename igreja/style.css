@@ -70,7 +70,6 @@ body {
     background-image: url(./img/fundo.jpeg);
 }
 .imgs {
-    background-color:blueviolet;
     backdrop-filter: blur(5px);
     width: 80%;
     margin-left: 10%;
@@ -87,21 +86,21 @@ h2 {
     margin-bottom: 30px;
 }
 
-.projects-container {
-    background-color: rgb(28, 28, 34);
-}
+
 .projects-container .project #imgprojeto{
     width: 300px;
 }
+.project {
+    text-align: center;
+}
 .slide-buttons {
-    background-color: blue;
     position: absolute;
     width: 90%;
     max-width: calc(100% - 20px); /* Subtrai 20px para deixar espaço para as setas */
     height: 10%;
     display: flex;
     justify-content: space-between;
-    top: 0;
+    top: -65%;
     bottom: 0;
     margin: auto;
 }
