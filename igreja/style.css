@@ -95,7 +95,7 @@ h2 {
     height: 10%;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-90%);}
+    transform: translateY(-50%);}
 .prev-btn,
 .next-btn {
     background-color: #5a5e8ab6;;
