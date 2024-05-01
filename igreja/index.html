@@ -31,7 +31,24 @@
     <div class="imgs">
         <section id="culto">
             <h2>Culto no Lar</h2>
-            <img class="image" src="./img/lar.jpeg" alt="img "/>
+            <div class="project-section">
+                <div class="projects-container">
+                    <div class="project" id="project1">
+                        <!-- Conteúdo do Projeto 1 -->
+                        <a ><img id="imgprojeto" src="./img/00.jpeg" alt="projeto bealtybook"/></a>
+                    </div>
+                    <div class="project" id="project2">
+                        <!-- Conteúdo do Projeto 2 -->
+                        <a><img id="imgprojeto" src="./img/01.jpeg" alt="projeto bealtybook"/></a>
+                    </div>
+                    <!-- Adicione mais projetos conforme necessário -->
+                    <div class="slide-buttons">
+                        <button class="prev-btn" onclick="changeProject(-1)">&#10094;</button>
+                        <button class="next-btn" onclick="changeProject(1)"> &#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <script src="scriptsCultoNoLar.js"></script>
         </section>
         <section id="visitas">
             
