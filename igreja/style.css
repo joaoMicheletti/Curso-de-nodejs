@@ -97,6 +97,7 @@ h2 {
     background-color: blue;
     position: absolute;
     width: 90%;
+    max-width: calc(100% - 20px); /* Subtrai 20px para deixar espaço para as setas */
     height: 10%;
     display: flex;
     justify-content: space-between;
@@ -104,6 +105,7 @@ h2 {
     bottom: 0;
     margin: auto;
 }
+
 
 .prev-btn,
 .next-btn {
