@@ -1,0 +1,52 @@
+body {
+    background-image: url(./back.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    background: linear-gradient(90deg, #e4e0e0, #d7d7d7, #ffffff, #d7d7d7, #b8b8b8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    background: linear-gradient(90deg, #e4e0e0, #d7d7d7, #ffffff, #fcfcfc, #dfdcdc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+img {
+    width: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.central {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(185, 180, 180, 0.233);
+    width: 50%;
+    margin-left: 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px 20px 20px;
+    backdrop-filter: blur(4px);
+    padding: 20px;
+}
