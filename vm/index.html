@@ -2,11 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VmSoftware</title>
     <link rel="icon" type="imagem/png" href="./assets/favicon-16x16.png" />
     <link rel="stylesheet" href="styles.css">
+    <script src="scriptInteracao.js"></script>
     <!-- Google tag (gtag.js) -->
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -39,63 +42,34 @@
 
     <section id="home">
         <div class="containerhome">
-            <h1>&#10094;VmSoftware/&#10095;</h1>
             <p>
-                inovação e tecnologia que seu negocio precisa!.<br/>
-                Na era digital em constante evolução, a chave 
-                para o sucesso empresarial reside na capacidade 
-                de abraçar a tecnologia e promover a inovação. 
-                Na VmSoftware, estamos comprometidos em 
-                ser o parceiro que você precisa para impulsionar 
-                o seu negócio para novas alturas.
+                Inovação e tecnologia que seu negócio precisa!<br/>
+
+                Na era digital em constante evolução, o sucesso empresarial
+                 depende da capacidade de abraçar a tecnologia e fomentar a 
+                 inovação. Na VmSoftware, estamos comprometidos em ser o 
+                 parceiro que você precisa para levar seu negócio a novos 
+                 patamares.
             </p>
             <button id="btn"><a href="#contato">Contato</a></button>
         </div>
         <div id="imghome">
-            <div class="project-section">
-                <div class="projects-container">
-                    <div class="project" id="project1">
-                    <!-- Conteúdo do Projeto 1 -->
-                    <a href="https://github.com/joaoMicheletti/BeautyBook" target="_blank" ><img id="imgprojeto" src="assets/homepropaganda.png" alt="projeto bealtybook"/></a>
-                </div>
-                <div class="project" id="project2">
-                    <!-- Conteúdo do Projeto 2 -->
-                    <a href="https://github.com/joaoMicheletti/BeautyBook" target="_blank"><img id="imgprojeto" src="assets/login.png" alt="projeto bealtybook"/></a>
-                </div>
-                <div class="project" id="project3">
-                    <!-- Conteúdo do Projeto 3 -->
-                    <a  href="https://github.com/joaoMicheletti/Bih/blob/main/frontend/src/pages/assets/login.png" target="_blank"><img id="imgprojeto" src="assets/cbia.png" alt="projeto bealtybook"/></a>
-                </div>
-                <div class="project" id="project4">
-                    <!-- Conteúdo do Projeto 3 -->
-                    <a href="https://nimble-conkies-fa2423curso-de-nodejs.netlify.app/" target="_blank"><img id="imgprojeto" src="assets/node.png" alt="projeto bealtybook"/></a>
-                </div>
-                <div class="project" id="project5">
-                    <!-- Conteúdo do Projeto 3 -->
-                    <a href="https://github.com/joaoMicheletti/BeautyBookBack-end" target="_blank"><img id="imgprojeto" src="assets/beauty.png" alt="projeto bealtybook"/></a>
-                </div>
-                <div class="project" id="project6">
-                    <!-- Conteúdo do Projeto 3 -->
-                    <a href="https://github.com/joaoMicheletti/Incrypt_full_project" target="_blank"><img id="imgprojeto" src="assets/encripty.png" alt="projeto bealtybook"/></a>
-                </div>
-                <div class="project" id="project7">
-                    <!-- Conteúdo do Projeto 3 -->
-                    <a href="https://joaomicheletti.github.io/sos_helpDesk/" target="_blank"><img id="imgprojeto" src="assets/sos.png" alt="projeto bealtybook"/></a>
-                </div>
-                <!-- Adicione mais projetos conforme necessário -->
-                </div>
-                <div class="slide-buttons">
-                    <button class="prev-btn" onclick="changeProject(-1)">&#10094;</button>
-                    <button class="next-btn" onclick="changeProject(1)"> &#10095;</button>
-                </div>
-            </div>
+            <h1>&#10094;VmSoftware/&#10095;</h1>
+            <p>Build your future</p>
         </div>
     </section>
     <section id="about">
-        <div class="conteudo" id='misao'>
-            <h2>Missão</h2>
-            <br/><br/>
-            <p>Na VmSoftware, impulsionamos transformações digitais 
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab-button active" data-target="#misao">Missão</button>
+                <button class="tab-button" data-target="#visao">Visão</button>
+                <button class="tab-button" data-target="#valores">Valores</button>
+            </div>
+            <div class="tab-content">
+                <div class="conteudo active" id="misao">
+                    <h2>Missão</h2>
+                    <p>
+                        Na VmSoftware, impulsionamos transformações digitais 
                 por meio de soluções inovadoras e cursos de programação 
                 acessíveis. Comprometidos em criar um impacto positivo, 
                 capacitamos indivíduos, empresas e comunidades a
@@ -103,24 +77,23 @@
                 de soluções tecnológicas web que superam as 
                 expectativas, oferecendo eficiência, escalabilidade 
                 e experiências excepcionais.
-            </p>
-        </div>
-        <div class="conteudo"  id="visao">
-            <h2>Visão</h2>
-            <br/>
-            <br/>
-            <p>Na VmSoftware, nossa visão é ser reconhecida 
+                    </p>
+                </div>
+                <div class="conteudo" id="visao">
+                    <h2>Visão</h2>
+                    <p>
+                        Na VmSoftware, nossa visão é ser reconhecida 
                 como uma força motriz na transformação digital, 
                 inspirando inovação e capacitando indivíduos em 
                 todo o mundo. Almejamos não apenas criar tecnologia,
                 mas também moldar um futuro onde as soluções digitais
                 impulsionem a excelência em todos os setores.
-            </p>
-        </div>
-        <div class="conteudo"  id="valores">
-            <h2>Valores</h2>
-            <br/><p>
-                Inovação:
+                    </p>
+                </div>
+                <div class="conteudo" id="valores">
+                    <h2>Valores</h2>
+                    <p>
+                        Inovação:
                 Cultivamos criatividade, incentivando soluções inovadoras. Encaramos desafios como oportunidades de crescimento.
                 
                 Educação Capacitadora:
@@ -134,9 +107,11 @@
                 
                 Responsabilidade Ambiental:
                 Minimizamos nosso impacto ambiental com práticas sustentáveis, contribuindo para um futuro mais verde.
-            </p>
+                    </p>
+                </div>
+            </div>
         </div>
-    </section>
+    </section>    
     <script src="scripts.js"></script>
     <section id="contato">
         <div class="container">
