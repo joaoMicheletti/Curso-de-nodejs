@@ -187,6 +187,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
 }
+
 footer #Container ul li {
     list-style: none;
 }
@@ -196,8 +197,33 @@ footer #Container ul li a {
 }
 footer #Container img {
     width: 20px;
-
 }
+#horarios {
+    background-color: #f0f0f02a; /* Cor de fundo suave */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza a div */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    font-family: 'Arial', sans-serif; /* Fonte limpa e legível */
+}
+
+#horarios h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f5f5f8; /* Cor do título */
+}
+
+#horarios p {
+    font-size: 16px;
+    color: #fcfbfb; /* Cor do texto */
+}
+
+#horarios strong {
+    color: #a3837c; /* Destaque para os horários */
+}
+
 
 
 #titleprojetos {
