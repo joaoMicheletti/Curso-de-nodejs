@@ -11,8 +11,8 @@ body {
 
 header {
     height: 40px;
-    box-shadow: 2px 2px 5px black;
-    background-image: url(./assets/02.jpg);
+    box-shadow: 2px 5px 5px black;
+    background-color: #1b1575;
     backdrop-filter: blur(4px);
 }
 header nav ul {
@@ -56,7 +56,7 @@ header nav ul li a:hover {
 }
 #home {
     height: 100vh;
-    background-image: url(./assets/02.jpg);
+    background-image: url(./assets/01.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -183,7 +183,7 @@ header nav ul li a:hover {
 .tabs {
     display: flex;
     justify-content: space-around;
-    background: #111111;
+    background-color: #2d2699;
     padding: 10px 0;
 }
 
@@ -200,7 +200,7 @@ header nav ul li a:hover {
 }
 
 .tab-button:hover, .tab-button.active {
-    background: #66666d; /* Cor mais escura ao focar ou ao clicar */
+    background: #353572; /* Cor mais escura ao focar ou ao clicar */
 }
 
 .tab-content {
@@ -217,7 +217,7 @@ header nav ul li a:hover {
     display: block;
     opacity: 1;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 35px;
 }
@@ -228,7 +228,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #2d2699;
     color: #fff;
     text-align: center;
     padding: 10px;
