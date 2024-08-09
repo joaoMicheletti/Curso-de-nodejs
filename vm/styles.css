@@ -77,7 +77,7 @@ header nav ul li a:hover {
     pointer-events: none; /* Permite a interação com os elementos abaixo */
 }
 #home .containerhome {
-    margin-top: 100px;
+    margin-top: 0px;
     margin-left:  5%;
     margin-right: 5%;
     width: 40%;
@@ -90,6 +90,12 @@ header nav ul li a:hover {
     margin-bottom: 20px;  /* Peso regular para o texto do parágrafo */   /* Ajuste o tamanho conforme necessário */
     line-height: 1.5;  /* Altura da linha para melhor legibilidade */
     color: #ffffff;    /* Cor do texto do parágrafo */
+}
+@media (max-width:800px){
+    #imghome {
+        display: none;
+    }
+
 }
 #imghome {
     width: 40%;
@@ -177,7 +183,6 @@ section {
     
 }
 
-
 footer {
     background-color: #333;
     color: #fff;
@@ -223,7 +228,12 @@ footer #Container img {
 #horarios strong {
     color: #a3837c; /* Destaque para os horários */
 }
+@media (max-width:500px){
+    footer {
+        flex-direction: column;
+    }
 
+}
 
 
 #titleprojetos {
