@@ -120,7 +120,7 @@ header nav ul li a:hover {
     font-size: 20px;
 }
 #about {
-    height: 100vh;
+    height: auto;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -128,7 +128,7 @@ header nav ul li a:hover {
 }
 
 .tab-container {
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     background: #fff;
     border-radius: 10px;
