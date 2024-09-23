@@ -328,7 +328,7 @@ nav a:hover{
     }
 }
 #TheBest {
-    margin-top: 50px;
+    margin-top: 150px;
     width: 90%;
     margin-left: 5%;
     display: flex;
@@ -338,7 +338,7 @@ nav a:hover{
     border-radius: 20px;
 }
 #TBTXT{
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 10%;
 }#TBTXT #TBP1{
     margin-top: 10px;
@@ -376,7 +376,7 @@ nav a:hover{
     display: flex;
     flex-direction: row;
 }#ATXT {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 50%;
 }#ATXT #AP1 {
     font-size: 15px;
