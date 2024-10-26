@@ -9,6 +9,11 @@ header {
     width: 90%;
     margin-left: 5%;
 }
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
 nav {
     color: white;
     font-size: 20px;
@@ -18,7 +23,13 @@ nav {
     justify-content: space-between;
 } 
 nav a {
+    text-decoration: none;
     cursor: pointer;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 nav a:hover {
     font-size: 22px;
@@ -46,6 +57,7 @@ body {
     background-attachment: fixed; 
     margin: 0;
     height: 100vh; 
+    font-family: "Poppins", sans-serif;
 }
 .imgs {
     width: 90%;
@@ -81,4 +93,109 @@ body {
     margin-left: 5%;
 }#Welcome img {
     width: 100%;
+}
+#Missao{
+    width: 90%;
+    margin-left: 5%;
+}
+#Missao h2 {
+    color: white;
+    font-size: 53px;
+    font-family: "Poppins", sans-serif;
+}
+#Missao p {
+    color: white;
+    font-size: 15px;
+}
+#pilares {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.pilaresInternos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.pilar {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px  solid #9400ff ;
+    border-radius: 20px;
+}
+.pilar img{
+    width: 60px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}.pilar p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    color: white;
+}
+@media(max-width: 700px){
+    .pilaresInternos{
+        display: flex;
+        flex-direction: column;
+    }
+    .pilar {
+        margin-bottom: 50px;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+#Mover {
+    width: 90%;
+    margin-left: 5%;
+}
+#Art {
+    width: 100%;  
+}#Art img {
+    width: 100%;
+}
+#TextContent {
+    margin-top: -300px;
+    display: flex;
+    flex-direction: row;
+}
+#oquenosmove {
+    width: 30%;
+}
+#oquenosmove img {
+    margin-top: 15px;
+    width: 100%;
+
+}
+#TXT{
+    margin-top: 15px;
+    width: 70%;
+    color: white;
+    font-size: 20px;
+}
+@media(max-width:700px){
+    #TextContent {
+        width: 100%;
+        margin-top: -100px;
+        display: flex;
+        flex-direction: column;
+    } 
+    #oquenosmove {
+        width: 100%;
+    }
+    #oquenosmove img {
+        margin-left: 10%;
+        width: 90%;
+    }
+    #TXT {
+        width: 100%;
+    }
 }
