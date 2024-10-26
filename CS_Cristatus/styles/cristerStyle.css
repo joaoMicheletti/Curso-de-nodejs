@@ -73,3 +73,9 @@ body {
       transform: translateY(0); /* Posição final no centro */
     }
 }
+#Welcome {
+    width: 90%;
+    margin-left: 5%;
+}#WelcomeImg {
+    width: 100%;
+}
