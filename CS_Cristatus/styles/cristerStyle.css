@@ -40,6 +40,9 @@ nav div input {
     color: white;
     width: 100px;
 }
+main {
+    height:  100vh;
+}
 body {
     background-image: url('../assets/backgrund.png');
     background-size: cover;
