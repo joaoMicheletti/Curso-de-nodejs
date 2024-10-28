@@ -291,10 +291,8 @@ body {
         margin-left: 5%;
         display: flex;
         flex-direction: column;
-    }
-
-    #escada {
-        margin-left: 0px;
+    }#HistoryImg  img {
+        height: 200px;
     }
     #HistoryTxt {
         width: 90%;
