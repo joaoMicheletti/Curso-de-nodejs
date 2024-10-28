@@ -292,7 +292,7 @@ body {
         display: flex;
         flex-direction: column;
     }#HistoryImg  img {
-        height: 200px;
+        height: 40%;
     }
     #HistoryTxt {
         width: 90%;
