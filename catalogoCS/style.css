@@ -119,7 +119,7 @@ h2 {
 } 
 .Img img {
     margin-top: 10px;
-    width: 90%;
+    width: 100%;
     border-radius: 10px;
 }
 .BTN {
@@ -145,7 +145,6 @@ h2 {
     }
     .Img {
         margin-left: -10px;
-        background-color: #98c15a;
         margin-top: 50px;
         width: 100%;
     }
