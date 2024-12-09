@@ -147,6 +147,7 @@ h2 {
         width: 100%;
     }
     .BTN{
-        background-color: aqua;
+        width: 50%;
+        margin-left: 25%;
     }
 }
