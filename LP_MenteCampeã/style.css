@@ -598,10 +598,38 @@ a {
     background-repeat: no-repeat;
 }
 footer{
+    display: flex;
+    flex-direction: row;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
     width: 100%;
     text-align: center;
-    background-color: #ffcc00;
+    background: linear-gradient(to right, #0e0d0d, #ffcc00);
+}
+#LogoFooter{
+    text-align: center;
+    width: 50%;
+   
+}
+#LogoFooter img {
+    width: 50%
+}
+#TXTFooter{
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+#TXTFooter p {
+    margin-top: 20px
 }
 
+@media(max-width:700px){
+    footer{
+        flex-direction: column
+    }
+    #LogoFooter{
+        width: 100%
+    }
+    #TXTFooter{
+        width: 100%;
+    }
+}
