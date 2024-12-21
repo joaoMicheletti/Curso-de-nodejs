@@ -1,52 +1,635 @@
-body {
-    background-image: url(./back.png);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#Primary{
+    background-image: url(./img/backgrund.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
-    margin: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
 }
-
-h1 {
+#UpBar {
     text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 48px;
-    background: linear-gradient(90deg, #e4e0e0, #d7d7d7, #ffffff, #d7d7d7, #b8b8b8);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 45px;
+    background-color: rgb(250, 212, 0);
+}
+#UpBar p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
 }
 
-a {
+#TxtPrimary {
+    color: white;
+    margin-top: 150px;
+    margin-left: 5%;
+    width: 40%;
+}
+.p1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 50px;
+
+}
+.p2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    text-decoration: none;
-    font-size: 30px;
-    background: linear-gradient(90deg, #e4e0e0, #d7d7d7, #ffffff, #fcfcfc, #dfdcdc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-
-img {
-    width: 80px;
-    border-radius: 50%;
-    margin: 0 auto;
+.p3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
 }
-
-.central {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    background-color: rgba(185, 180, 180, 0.233);
+.BTN {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 10px;
     width: 50%;
-    margin-left: 25%;
+    height: 35px;
+    background: linear-gradient(to right, #ff7b00, #ffcc00);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px yellow;
+    cursor: pointer;
+    
+    animation: bounce 2s infinite ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+@media(max-width: 600px){
+    #UpBar p {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 10px;
+    }
+    #Primary{
+        background-image: url(./img/mobile01.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+    #TxtPrimary {
+        color: white;
+        margin-left: 10%;
+        width: 80%;
+    }
+    .p1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+    
+    }
+    .p2 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .p3 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+    }
+    .BTN {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media(max-width: 700px){
+    #TxtPrimary {
+        margin-top: 200px;
+    }
+}
+@media(min-width: 900px){
+    #TxtPrimary {
+        margin-top: 200px;
+    }
+}
+#DataBar {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #ff7b00, #ffcc00);
+    height: 150px;
+}
+#regressiva {
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#Data {
+    width: 80%;
+    margin-left: 10%;
     display: flex;
-    flex-direction: column;
-    border-radius: 10px 10px 20px 20px;
+    height: 90px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.txtData {
+    font-size: 10px;
+}
+.time {
+    padding-top: 1%;
+    font-size: 50px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 20%;
+    background-color: black;
+    height: 90px;
+    box-shadow: 3px 3px 5px 3px black;
+}
+#Depoimentos{
+    width: 100%;
+    background-color: black;
+    height: 100vh;
+    background-image: url(./img/depoimento.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#TitleDepoimento {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    color: white;
+}
+#depoimentoArea {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    
+}
+.divDepoimento {
+    text-align: center;
+    width: 25%;
+    border: 2px solid #ffcc00;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.imgdepoimento {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    border-radius: 50%;
+}
+.TxtDepoimento {
+    text-align: inherit;
+    color: white;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media(max-width: 750px){
+    #depoimentoArea {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10%;
+    }
+    .divDepoimento {
+        text-align: center;
+        margin-left: 10%;
+        margin-bottom: 30px;
+        width: 80%;
+        border: 2px solid #ffcc00;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+    }
+    #Depoimentos{
+        height: auto;
+    }
+}
+#CriadoParavc {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000000fb, #38342c);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#TitleCriadoParavc {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    text-align: center;
+}
+#TXTparaVC {
+    width: 80%;
+    margin-left: 10%;
+}
+#TXTparaVC p {
+    line-height: 35px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+}
+#Btnvc {
+    font-weight: 600;
+    margin-top: 100px;
+    margin-left: 25%;
+    width: 50%;
+    height: 50px;
+}
+@media(max-width: 750px){
+    #TXTparaVC p {
+        line-height: 35px;
+        text-align: left;
+        color: white;
+        font-size: 20px;
+    }
+    #Btnvc {
+        font-weight: 600;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        margin-left: 0;
+        width: 100%;
+        height: 50px;
+    }
+    #CriadoParavc {
+        height: auto;    
+    }
+}
+#Final{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to bottom, #38342c, #000000fb);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+@media(max-width: 750px){
+    #Final{
+        height: auto;
+    }
+}
+#TitleFinal {
+    font-size: 25px;
+    color: white;
+    line-height: 35px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#DivFinal{
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    line-height: 25px;
+    width: 80%;
+    margin-left: 10%;
+    text-align: justify;
+}
+#Facaoqprecisaserfeito {
+    width: 100%;
+    background-image: url(./img/depoimento.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#DivFaca{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
     backdrop-filter: blur(4px);
-    padding: 20px;
+}
+#DivFaca #PFaca {
+    font-weight: 900;
+    font-size: 30px;    
+    padding-top: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+#serFeito{
+    font-size: 20px;
+    font-weight: 900;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: linear-gradient(to right, #ff7b00, #ffcc00);
+    width: 30%;
+    margin-left: 35%;
+}
+#Pergunta {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+#PER {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: #ffcc00;
+}
+#Alert{
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#ContentDivFaca {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+    width: 90%;
+    margin-left: 5%;
+}
+#ContentDivFaca h2 {
+    padding-top: 50px;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+}
+ .PFACA {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffcc00;
+}
+@media(max-width: 750px){
+    #ContentDivFaca{
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        backdrop-filter: blur(4px);
+    }
+    #serFeito{
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+#CronoEvento {
+    height: auto;
+    width: 100%;
+    background-image: url(./img/depoimento.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#CronoPTitle {
+    text-align: center;
+    color: black;
+    width: 50%;
+    font-size: 30px;
+    margin-left: 25%;
+    background-color: #ffcc00;
+}
+#CronoP2 {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+#CronoDiv {
+    margin-top: 80px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.DivCronoIntinerario {
+    color: white;
+    text-align: initial;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    background: transparent;
+    border: 1px solid yellow;
+    backdrop-filter: blur(9px);
+    box-shadow: #ffcc00 2px 2px 5px;
+    margin-bottom: 150px;
+}
+.DivCronoIntinerario img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.DivCronoIntinerario p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+@media(max-width: 700px){
+    #CronoDiv {
+        margin-top: 80px;
+        width: 80%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction:column;
+    }
+    .DivCronoIntinerario {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 30px;
+    }
+}
+#MidBar{
+    width: 100%;
+}
+#ContentMidBar {
+    padding-top: 100px;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to right, #ff7b00, #ffcc00);
+}
+#ContentMidBar p {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+@media(max-width: 700px){
+    #ContentMidBar {
+        padding-top: 50px;
+        height: 200px;
+    }
+    #ContentMidBar p {
+        font-size: 20px;
+    }
+}
+#Ticket{
+    width: 100%;
+    background-image: url(./img/depoimento.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#TiketPlace{
+    width: 80%;
+    margin-left: 10%;
+    border: solid 1px yellow;
+    box-shadow: #ffcc00 2px 2px 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.TheTiket {
+    text-align: center;
+    width: 33.3%;
+    background-color: #ffffff00;
+}
+#fundoTiket013{
+    background-color: #2b2925;
+}
+#fundoTiket02 {
+    background-color: #413e38;
+}
+.ContentTiket{ 
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px solid gray;
+}
+.ContentTiket img {
+    padding: 10px;
+    width: 40px;
+    
+}
+.ContentTiket p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.HeaderTiket {
+    border-bottom: 1px rgb(119, 114, 114);
+}
+#HT0{
+    background: linear-gradient(to right, #caac8f, #e0cb7d);    
+}
+#HT1{
+    background: linear-gradient(to right, #85817e, #d1b722);    
+}
+#HT2{
+    background: linear-gradient(to right, #0e0d0d, #ffcc00);    
+}
+.PHeaderTiket{
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+#BTNACTION {
+    margin-left: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+#BTNACTION button {
+    width: 50%;
+    height: 50px;
+    margin-left: 25%;
+}
+@media(max-width: 700px){
+    #TiketPlace{
+        border: none;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;     
+    }
+    .TheTiket {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 50px;
+    }
+}
+#Local {
+    width: 100%;
+    height: auto;
+    background-image: url(./img/depoimento.png);
+}
+#DicLocation {
+    margin-left: 10%;
+    width: 80%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+#LOCATIONIMG {
+    border-radius: 20px;
+    width: 100%;
+    background-image: url(./img/mobile01.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #0e0d0d, #ffcc00);
+}
+#LogoFooter{
+    text-align: center;
+    width: 50%;
+   
+}
+#LogoFooter img {
+    width: 50%
+}
+#TXTFooter{
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+#TXTFooter p {
+    margin-top: 20px
+}
+
+@media(max-width:700px){
+    footer{
+        flex-direction: column
+    }
+    #LogoFooter{
+        width: 100%
+    }
+    #TXTFooter{
+        width: 100%;
+    }
 }
