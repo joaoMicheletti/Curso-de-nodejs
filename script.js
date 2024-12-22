@@ -7,7 +7,7 @@ const render = (dia, horas, minutos, segundos) => {
 
 const countdown = () => {
     const now = new Date();
-    const targetDate = new Date(2025, 1, 2); // Note que meses começam do 0 (Janeiro é 0, Fevereiro é 1)
+    const targetDate = new Date(2025, 2, 16); // Note que meses começam do 0 (Janeiro é 0, Fevereiro é 1)
 
     const timeLeft = targetDate - now;
 
