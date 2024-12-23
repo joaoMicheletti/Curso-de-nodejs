@@ -93,7 +93,7 @@ a {
     color: white;
     font-family: "Poppins";
     font-size: 14px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 @media(max-width: 600px){
@@ -495,7 +495,6 @@ a {
     flex-direction: row;
     justify-content: space-around;
 }
-
 .Dep {
     display: flex;
     flex-direction: column;
@@ -568,10 +567,235 @@ a {
 }
 @media(max-width:600px){
     #ButtonSection06{
-        width: 50%;
-        margin-left: 25%;
+        width: 80%;
+        margin-left: 10%;
     }
     #ButtonSection06 a {
-        font-size: 12px;
+        font-size: 10px;
     }
+}
+#Section07 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/backgrund07.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#ImgMoniqui{
+    width: 40%;
+    text-align: center;
+}
+#ImgMoniqui img {
+    width: 100%
+    
+}
+#BioMoniquiAgnes{
+    width: 40%;
+}
+#TitleBioMoniquiAgnes {
+    padding-top: 50px;
+    text-align: center;
+    font-family: "Lucidity";
+    font-size: 22px;
+    color: #eaab03;
+    margin-bottom: 30px;
+}
+#txtBio {
+    font-size: 22px;
+    color: white;
+    font-family: "Poppins";
+}
+@media(max-width:600px) {
+    #Section07 {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }    
+    #BioMoniquiAgnes{
+        margin-left: 5%;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    #txtBio {
+        text-align: center;
+    }
+    #ImgMoniqui{
+        width: 90%;
+        margin-left: 5%;
+        text-align: center;
+    }
+    #ImgMoniqui img {
+        width: 100%
+        
+    }
+}
+#Section08{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/backgrund07.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#PtitleSection07 {
+    padding-top: 30px;
+    color: #eaab03;
+    font-size: 22px;
+    font-family: "Lucidity";
+    text-align: center;
+}
+#ButtonSection08 {
+    margin-top: 20px;
+    height: 35px;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 5px;
+    border: none;
+    background: radial-gradient(circle at center, #df832e, #683409);
+}
+#ButtonSection08 a {
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+}
+@media(max-width:600px){
+    #ButtonSection08 {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+#Shorts {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.DivShost {
+    width: 20%;
+    height: 400px;
+}
+.DivShost iframe {
+    width: 100%;
+    height: 400px;
+}
+@media(max-width: 600px){
+    #Shorts {
+        display: flex;
+        flex-direction: column;
+    }
+    .DivShost {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 30px;
+        height: 400px;
+    }
+    #Section08{
+        height: auto;
+    }
+}
+#Section09 {
+    width: 100%;
+    height: auto;
+    background-image: url(./img/backgrund09.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#TitleSection09 {
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Lucidity";
+    font-size: 22px;
+    color: #eaab03;
+    margin-bottom: 10px;
+}
+#SubTitileSection09{
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 14px;
+    color: #f5dfa4;
+}
+#DivParaQuem {
+    margin-top: 30px;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+.ConteudoParaQuem {
+    width: 45%;
+    height: auto;
+}
+.LogoInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.LogoInfo img {
+    width: 20%;
+
+}
+.PInfo {
+    padding-top: 5px;
+    font-family: "Poppins";
+    font-size: 17px;
+    font-weight: 600;
+    color: #f5dfa4;
+}.PInfo D {
+    color: #eaab03;
+}
+#Info01{
+    background: linear-gradient(135deg, #bf0f30, #731d2c);
+}
+#Info02{
+    background: linear-gradient(135deg, #bf0f30, #1e1416);
+}
+.TheInfo{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.LineInfo{
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10PX;
+}
+.LineInfo img {
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 30px;
+    height: 20px;
+}
+.pLineInfo {
+    font-family: "Poppins";
+    color: white;
+}
+@media(max-width:600px) {
+    #DivParaQuem {
+        margin-top: 30px;
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .ConteudoParaQuem {
+        margin-top: 20px;
+        width: 80%;
+        margin-left: 10%;
+        height: auto;
+    }
+    .LogoInfo img {
+        width: 20%;
+    } 
 }
