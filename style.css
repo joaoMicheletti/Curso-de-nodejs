@@ -799,3 +799,314 @@ a {
         width: 20%;
     } 
 }
+#Section10 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/backgrund07.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#FAQ{
+    padding-top: 100px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+#DiSection10Title {
+    width: 25%;
+}
+#Psection10 {
+    padding-top: 100px;
+    font-family: "Lucidity";
+    font-size: 22px;
+    color: white;
+}#Psection10 D {
+    color: #eaab03;
+}
+#Questions {
+    margin-top: 30px;
+    width: 50%;
+    border: solid 1px rgba(255, 255, 255, 0.247);
+}
+.Pergunta {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    border: solid 1px rgba(255, 255, 255, 0.247);
+    font-family: "Poppins";
+    color: white;
+    font-size: 18px;
+}
+.DivReponse {
+    width: 100%;
+    height: 40px;
+    font-family: "Poppins";
+    font-size: 12px;
+    color: white;
+    display: none;
+}
+@media(max-width: 600px){
+    #Section10{
+        height: auto;
+    }
+    #FAQ{
+        display: flex;
+        flex-direction: column;
+    }  
+    #DiSection10Title {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 50px;
+    }
+    #Questions {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+#Section11 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/backgrund07.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#DivSection11 {
+    padding-top: 80px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+.ConteudoSection11 {
+    width: 45%;
+}
+.ConteudoSection11 iframe {
+    width: 100%;
+    height: 500px;
+}
+.ConteudoSection11 p {
+    padding-top: 180px;
+    font-size: 30px;
+    font-family: "Lucidity";
+    color: #eaab03;
+}
+@media(max-width:600px){
+    #Section11 {
+        height: auto;
+    }
+    #DivSection11 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ConteudoSection11 {
+        width: 100%;
+    }
+    .ConteudoSection11 iframe {
+        width: 100%;
+        height: 500px;
+    }
+    .ConteudoSection11 p {
+        padding-top: 0;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+}
+#Section12 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/backgrund12.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#TitleSection12 {
+    text-align: center;
+    padding-top: 40px;
+    font-family:"Lucidity";
+    font-size: 22px;
+    color: white;
+    padding-bottom: 50px;
+}
+#DivSection12 {
+    margin-top: 50px;
+    width: 90%;
+    margin-left: 5%;
+}
+.imgsSection12 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.imgsSection12 img {
+    width: 25%;
+}
+@media(max-width: 600px){
+    #TitleSection12 {
+        padding-top: 150px;
+        font-size: 30px;
+    }
+    .imgsSection12 img {
+        width: 30%;
+    }
+}
+#RedBar {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #bf0f30, #731d2c);
+}
+#PRedBar {
+    padding-top: 25px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: 900;
+}
+@media(max-width:600px){
+    #PRedBar {
+        font-size: 20px;
+    }
+}
+#Section13 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/backgrunform.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#DivSection13 {
+    padding-top: 80px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ContentDivSection13 {
+    width: 40%;
+    height: auto;
+}
+#PTitleSection13 {
+    padding-top: 10px;
+    font-family: "Lucidity";
+    font-size: 22px;
+    color: #eaab03;
+    padding-bottom: 10px;
+}
+#PSub {
+    font-size: 14px;
+    font-family: "Poppins";
+    color: white;
+    padding-bottom: 20px;
+}
+.Contato {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.Contato p {
+    font-family: "Poppins";
+    font-size: 14px;
+    color: white;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.imgForm {
+    width: 30px;
+}
+#UltimoP {
+    font-family: "Poppins";
+    font-size: 14px;
+    color: white;
+}
+#Redirecv{
+    margin-top: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#Redirecv img {
+    width: 30px;
+}
+#Form {
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    background-color: #fafafa8c;
+    width: 90%;
+    border: none;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.DD {
+    background-color: #fafafa8c;
+    width: 70%;
+    border: none;
+    height: 40px;
+    margin-bottom: 20px;
+}
+#ARea {
+    height: 80px;
+}
+#Form button {
+    width: 70%;
+    background: linear-gradient(to right, #bf0f30, #731d2c);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+}
+#Form button a {
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+}
+@media(max-width: 600px){
+    #Section13 {
+        height: auto;
+    }
+    #DivSection13 {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .ContentDivSection13 {
+        margin-left: 5%;
+        width: 90%;
+        height: auto;
+        padding-bottom: 40px;
+    }
+}
+footer {
+    width: 100%;
+    height: 80px;
+    background: radial-gradient(circle, #df832e, #683409);
+}footer div {
+    font-family: "Poppins";
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+    width: 30%;
+    margin-left: 35%;
+}
+footer img {
+    width: 30%;
+    height: 30%;
+}
