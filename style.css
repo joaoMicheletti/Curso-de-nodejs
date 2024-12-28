@@ -32,6 +32,7 @@ a {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     padding: 10px;
+    animation: wave 3s infinite;
 }
 
 #TxtPrimary {
@@ -92,6 +93,7 @@ a {
     width: 60%;
     border: none;
     border-radius: 5px;
+    animation: wave 2s infinite;
 }
 .BTN a {
     color: white;
@@ -203,18 +205,17 @@ a {
 }
 #ConteudoVSL {
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 .DivVsl {
-    padding-top: 10px;
     width: 80%;
     margin-left: 10%;
     text-align: center;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 #pTitle02 {
     font-family: 'Lucidity';
-    padding-top: 50px;
+    padding-top: 10px;
     font-size: 18px;
     color: #eaab03;
 }
@@ -232,7 +233,7 @@ a {
 #subTitle02{
     font-family: "Poppins";
     line-height: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
     font-family: 14px;
     color: white;
     
@@ -287,7 +288,7 @@ a {
 #ContentSection03 {
     width: 50%;
     margin-left: 50%;
-    height: 100vh;  
+    height: 100vh;
 }
 .pContentsection03 {
     padding-top: 80px;
@@ -302,12 +303,14 @@ a {
     border: none;
     border-radius: 5px;
     background: radial-gradient(circle, #df832e, #683409);
+    animation: wave 3s infinite;
 }
 #BtunSection03 a {
     font-family: "Poppins";
     font-size: 12px;
     font-weight: 600;
     color: white;
+    
 }
 @media(max-width: 600px){
     #section03{
@@ -482,7 +485,7 @@ a {
     border: none;
     border-radius: 5px;
     background: linear-gradient(to right, #bf0f30, #731d2c);
-    animation: wave 3s infinite;
+    animation: wave 2s infinite;
 }
 #BtnSection05 a {   
     font-family: "Poppins";
@@ -498,7 +501,7 @@ a {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-    }    #DivSection05 {
+    }#DivSection05 {
         text-align: center;
         display: flex;
         height: 500px;
@@ -536,7 +539,6 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    animation: slideIn 2s ease-in-out forwards; 
 }
 .Dep {
     display: flex;
@@ -700,6 +702,7 @@ a {
     border-radius: 5px;
     border: none;
     background: radial-gradient(circle at center, #df832e, #683409);
+    animation: wave 3s infinite;
 }
 #ButtonSection08 a {
     text-decoration: none;
@@ -711,6 +714,7 @@ a {
     #ButtonSection08 {
         width: 80%;
         margin-left: 10%;
+        animation: none;
     }
 }
 #Shorts {
@@ -852,7 +856,7 @@ a {
     background-size: cover;
 }
 #FAQ{
-    padding-top: 100px;
+    padding-top: 10px;
     width: 90%;
     margin-left: 5%;
     display: flex;
@@ -878,7 +882,7 @@ a {
 }
 .Pergunta {
     width: 100%;
-    height: 40px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -888,13 +892,30 @@ a {
     color: white;
     font-size: 18px;
 }
+.txtpergunta {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.setaimg {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 20px;
+    height: 10px;
+}
 .DivReponse {
     width: 100%;
-    height: 40px;
+    height: auto;
     font-family: "Poppins";
     font-size: 12px;
     color: white;
     display: none;
+}
+.DivReponse p {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 @media(max-width: 600px){
     #Section10{
@@ -973,41 +994,49 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 #TitleSection12 {
+    padding-top: 50px;
     text-align: center;
-    padding-top: 40px;
     font-family:"Lucidity";
-    font-size: 22px;
+    font-size: 20px;
     color: white;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
+
 #DivSection12 {
-    margin-top: 50px;
+    margin-top: 10px;
     width: 90%;
     margin-left: 5%;
-}
-#IMGSEctio01{
-    animation: slideIn 2s ease-in-out forwards; /* Animação */ 
-}
-#IMGSEctio02{
-    animation: slideInRight 2s ease-in-out forwards; /* Animação */
 }
 .imgsSection12 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    animation: wave 3s infinite;
 }
 .imgsSection12 img {
-    width: 25%;
+    width: 30%;
 }
 @media(max-width: 600px){
+    #Section12 {
+        height: auto;
+    }
     #TitleSection12 {
-        padding-top: 150px;
-        font-size: 30px;
+        font-size: 20px;
+    }
+    #IMGSEctio02  {
+        display: none;
+    }
+    #IMGSEctio01 {
+        display: flex;
+        flex-direction: column;
     }
     .imgsSection12 img {
-        width: 30%;
+        margin-left: 20%;
+        width: 60%;
+        margin-bottom: 10px;
     }
 }
 #RedBar {
@@ -1022,6 +1051,7 @@ a {
     font-size: 30px;
     font-family: "Poppins";
     font-weight: 900;
+    animation: wave 3s infinite;
 }
 @media(max-width:600px){
     #PRedBar {

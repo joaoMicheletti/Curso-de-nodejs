@@ -13,20 +13,11 @@ function isInViewport(element) {
     //section MoveVSL
     const pTitle02 = document.querySelector('#pTitle02');
     if (isInViewport(pTitle02)) {
-        pTitle02.style.animation = 'slideIn 0.50s ease-in-out forwards';
+        pTitle02.style.animation = 'slideIn 0.40s ease-in-out forwards';
     }
     const subTitle02 = document.querySelector('#subTitle02');
     if (isInViewport(subTitle02)) {
         subTitle02.style.animation = 'slideInRight 0.50s ease-in-out forwards';
-    }
-    //Section03
-    const pContentsection03 = document.querySelector('#pContentsection03');
-    if (isInViewport(pContentsection03)) {
-        pContentsection03.style.animation = 'slideIn 0.50s ease-in-out forwards';
-    }
-    const BtunSection03 = document.querySelector('#BtunSection03');
-    if (isInViewport(BtunSection03)) {
-        BtunSection03.style.animation = 'slideInRight 0.50s ease-in-out forwards';
     }
     //section04:
     const Conteiner01 = document.querySelector('#Conteiner01');
@@ -40,7 +31,7 @@ function isInViewport(element) {
     //section06
     const Depoimentos = document.querySelector('#Depoimentos');
     if (isInViewport(Depoimentos)) {
-        Depoimentos.style.animation = 'slideInRight 0.50s ease-in-out forwards';
+        Depoimentos.style.animation = 'slideInRight 0.10s ease-in-out forwards';
     }
     //section08 
     const PtitleSection07 = document.querySelector('#PtitleSection07');
@@ -54,26 +45,12 @@ function isInViewport(element) {
     //section 09
     const TitleSection09 = document.querySelector('#TitleSection09');
     if (isInViewport(TitleSection09)) {
-        TitleSection09.style.animation = 'slideInRight 0.50s ease-in-out forwards';
+        TitleSection09.style.animation = 'slideInRight 1s ease-in-out forwards';
     }
-    const ParaQ01 = document.querySelector('#ParaQ01');
-    if (isInViewport(ParaQ01)) {
-        ParaQ01.style.animation = 'slideIn 0.50s ease-in-out forwards';
-    }
-    const ParaQ02 = document.querySelector('#ParaQ02');
-    if (isInViewport(ParaQ02)) {
-        ParaQ02.style.animation = 'slideInRight 0.50s ease-in-out forwards';
-    }
-    //section12
-    const IMGSEctio01 = document.querySelector('#IMGSEctio01');
-    if (isInViewport(IMGSEctio01)) {
-        ParaQ01.style.animation = 'slideIn 0.50s ease-in-out forwards';
-    }
-    const IMGSEctio02 = document.querySelector('#IMGSEctio02');
-    if (isInViewport(IMGSEctio02)) {
-        IMGSEctio02.style.animation = 'slideInRight 0.50s ease-in-out forwards';
+    const SubTitileSection09 = document.querySelector('#SubTitileSection09');
+    if (isInViewport(TitleSection09)) {
+        SubTitileSection09.style.animation = 'slideInRight 1s ease-in-out forwards';
     }
   }
-
   // Verifica a visibilidade ao rolar a página
   window.addEventListener('scroll', checkVisibility);
