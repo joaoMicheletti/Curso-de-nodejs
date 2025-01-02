@@ -340,6 +340,100 @@ a {
         background: radial-gradient(circle, #df832e, #683409);
     }
 }
+body #Quadradinhos{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/quadradinhos.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#QuadradinhosContainer {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.Quadradinhos {
+    width: 40%;
+    height: auto;
+}
+
+.quadradinhos3{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: space-around;
+}
+.Quadrado {
+    background: linear-gradient(135deg, #ffffff00, #27633f);
+    border: solid 0.01px;
+    border-color: #27633f;
+    width: 30%;
+    height: 120px;
+    text-align: left;
+    border-radius: 10px;
+}
+#Q2 .Quadrado{
+    background: linear-gradient(135deg, #ff583300, #723320);
+    border: solid 0.01px;
+    border-color:#723320;
+
+}
+
+.Pquadradro {
+    margin-left: 3px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-family: "Poppins";
+    font-size: 13px;
+    color: white;
+}
+.Pcorpo {
+    margin-left: 3px;
+    font-size: 10px;
+    font-family: "Poppins";
+    color: white;
+    padding-bottom: 10px;
+}
+#QuadradinhosBTN {
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+#QuadradinhosBTN p {
+    font-family: "Poppins";
+}
+#QuadradinhosBTN .larg {
+    font-weight: 600;
+}
+#QuadradinhosBTN  button {
+    height: 35px;
+    background: linear-gradient(135deg, #bf0f30, #ff583327);
+
+}
+@media(max-width: 800px){
+    body #Quadradinhos{
+        height: auto;
+    }
+    #QuadradinhosContainer {
+        display: flex;
+        flex-direction: column;
+    }    
+    .Quadradinhos {
+
+        width: 100%;
+        height: auto;
+    }  
+    #QuadradinhosBTN {padding-bottom: 30px;
+    }  
+}
 #Section04 {
     width: 100%;
     height: 100vh;
@@ -421,7 +515,8 @@ a {
     background: linear-gradient(90deg, #ffffff00, #746f6f);
 }
 .ImgSubconteiner {
-    width: 40%;
+    padding-top: 10px;
+    width: 50%;
 }
 .pSubConteiner{
     font-family: "Poppins";
@@ -623,60 +718,96 @@ a {
 #Section07 {
     width: 100%;
     height: 100vh;
-    background-image: url(./img/backgrund07.png);
+    background-image: url(./img/backgrundbio.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 #ImgMoniqui{
     width: 40%;
+    background-image: url(./img/MoniquiBioImg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
 }
 #ImgMoniqui img {
-    width: 100%
+    margin-top: 17px;
+    float: right;
+    width: 90%
     
 }
 #BioMoniquiAgnes{
+    margin-left: 50px;
     width: 40%;
 }
 #TitleBioMoniquiAgnes {
-    padding-top: 50px;
     text-align: center;
+    padding-top: 50px;
     font-family: "Lucidity";
-    font-size: 22px;
+    font-size: 25px;
     color: #eaab03;
-    margin-bottom: 30px;
+}
+#PDivBio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: left;
+    width: 80%;
+    margin-left: 20%;
+    height: auto;
+}
+.DivDivPBIo {
+    width: 100%;
+    display:  flex;
+    flex-direction: row;
+}
+#Diamond{
+    width: 30px;
+    height: 30px;
+    padding: 5px ;
 }
 #txtBio {
-    font-size: 22px;
+    margin-bottom: 20px;
+    font-size: 12px;
     color: white;
     font-family: "Poppins";
 }
-@media(max-width:600px) {
+#BioBtn{
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-bottom: 10PX;
+    font-family: "Poppins";
+}
+#BioBtn button {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+@media(max-width:800px) {
     #Section07 {
         height: auto;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }    
     #BioMoniquiAgnes{
         margin-left: 5%;
         width: 90%;
         margin-bottom: 20px;
     }
+    #PDivBio {
+        width: 80%;
+        margin-left: 10%;
+    }
     #txtBio {
         text-align: center;
     }
-    #ImgMoniqui{
-        width: 90%;
-        margin-left: 5%;
-        text-align: center;
-    }
-    #ImgMoniqui img {
-        width: 100%
-        
+    #ImgMoniqui {
+        display: none;
     }
 }
 #Section08{

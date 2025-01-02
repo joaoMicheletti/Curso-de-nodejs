@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
-    
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <title>Mente Campeã</title>
@@ -14,6 +14,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         #agradecemos {
             width: 100%;
             height: 100vh;
@@ -30,23 +31,13 @@
             }
 
         }
-        #TxtPrimary {
-            margin-left: 5%;
-            width: 40%;
-            height: 100vh;
-        }
-        #p1 {
-            padding-top: 50px;
-            font-family: 'Lucidity';
-            font-size: 26px;
-            color: white;
-        }
-        #p1a {
-            font-family: 'Lucidity';
-            font-size: 26px;
-            color: #eaab03;
-            padding-bottom: 50px;
-        }
+        #p1a{
+            padding-top: 100px;
+            font-size: 30px;
+            font-weight: 600;
+            padding-bottom: 20px;
+
+        }       
 
         @keyframes wave {
         0%, 100% {
@@ -82,10 +73,11 @@
             font-family: "Poppins";
         }
         .BTN {
-            background: radial-gradient(circle, #df832e, #683409);
+            background: #10c03fdc;
             margin-top: 40px;
-            height: 30px;
-            width: 60%;
+            margin-bottom: 30px;
+            height: 45px;
+            width: 80%;
             border: none;
             border-radius: 5px;
             animation: wave 2s infinite;
@@ -122,15 +114,11 @@
                 height: 100vh;
             }
             #TxtPrimary {
-                padding-top: 50px;
+                padding-top: 30px;
                 color: white;
-                width: 99%;
                 height: 100vh;
             }
-            .p1 {
-                font-size: 13px;    
-            }
-            .p1a{
+            #p1a{
                 font-size: 13px;
                 padding-bottom: 20px;
 
@@ -184,31 +172,56 @@
                 width: 100%;
             }
         }
+        #Porcentagem{
+            margin-top: 20px;
+            height: 40px;
+            width: 80%;
+            background-color: white;
+            border-radius: 10px;
+        }
+        #SubPorcentaguem {
+            color: white;
+            font-weight: 600;
+            padding: 10px;
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border-radius: 10px 0px 0px 10px;
+            box-shadow: 0px 0px  10px 5px black;
+            background: radial-gradient(circle, #df832e, #683409);
+        }
+        #Ate {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #eaab03;
+        }
 
     </style>
 </head>
 <body>
     <section id="agradecemos">
         <div id="TxtPrimary">
-            <p id="p1" class="animate__animated animate__bounce">
-                Day traning |<br/>
-            </p>
-            <p id="p1a" class="animate__animated animate__tada" >Mente campeã</p>
+            <p id="p1a" class="animate__animated animate__tada" >PARABÉNS!</p>
             <p class="p2">
-                Participe do grupo exclusivo do evento Mente Campeã!<br/>
-                Receba em primeira mão conteúdos transformadores<br/>
-                e informações valiosas para quebrar barreiras,<br/>
-                reprogramar sua mente e ativar todo o seu<br/>
-                potencial rumo a resultados extraordinários.
+                Você acabou de dar o 1º passo para <br/>transformar sua vida de forma extraordinaria 
             </p>
+            <div id="Porcentagem">
+                <div id="SubPorcentaguem">
+                    <p>Day Training | Mente Campeâ</p>
+                    <p>80%</p>
+                </div>
+            </div>
             <p class="p3">
                 Clique no botão abaixo e junte-se ao grupo exclusivo<br/>
                 para começar essa  <b class="p3a">jornada transformadora</b>agora mesmo!. 
             </p>
-            <button  class="BTN"><a href="https://chat.whatsapp.com/ENEhAtnTD35E2CpNE4ebmx"><b>Garantir meu lugar no Mente Campeã</b></a></button>
-            <p class="p4">Essa é sua chance de conquistar <d class="p4a">resultados reais</d> na sua<br/> 
-                <d class="p4a">carreira, financeiro, desenvolvimento pessoal</d> e <d class="p4a">profissional.</d>
+            <button  class="BTN"><a href="https://chat.whatsapp.com/ENEhAtnTD35E2CpNE4ebmx"><b>Faça parte da Comunidade</b></a></button>
+            <p class="p3"> Agora voê só pecisa entrar no meu grupo exclusivo, para <br/>ser notificado de cada novidade e conteúdo
+                NOVO.
             </p>
+            <p id="Ate" class="animate__animated animate__tada" >Nos vemos em breve!</p>
         </div>
 
     </section>
