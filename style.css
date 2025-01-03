@@ -3,21 +3,40 @@
 @font-face {
     font-family: 'Lucidity';
     src: url(./fonts/Lucidity-Expand.ttf) format('truetype');
+    src: url(./fonts/Loubag-Black.ttf) format('truetype');
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-image: url('./img/backgrund07.png');
+    background-size: cover;
+    background-attachment: fixed; 
+    margin: 0;
+    height: 100vh; 
+    background-size: cover; /* opcional, para cobrir toda a tela */
+  }
 a {
     text-decoration: none;
     color: black;
 }
+@keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    75% {
+      transform: translateY(-5px);
+    }
+  }
 #Primary{
-    background-image: url(./img/backgrund01.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: 100vh;
 }
@@ -35,39 +54,25 @@ a {
     animation: wave 3s infinite;
 }
 
+#Display {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+}
 #TxtPrimary {
-    margin-left: 5%;
+    margin-left: 10%;
     width: 40%;
-    height: 100vh;
+    height: auto;
+    width: 900;
 }
-#p1 {
-    padding-top: 50px;
-    font-family: 'Lucidity';
-    font-size: 26px;
-    color: white;
+#ImgMoniqui {
+    width: 40%;
 }
-#p1a {
-    font-family: 'Lucidity';
-    font-size: 26px;
-    color: #eaab03;
-    padding-bottom: 50px;
+#title {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
-@keyframes wave {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  75% {
-    transform: translateY(-5px);
-  }
-}
-
 .p2 {
     font-size: 14px;
     color: white;
@@ -76,20 +81,18 @@ a {
 }
 .p3 {
     padding-top: 20px;
-    font-size: 14px;
+    font-size: 12px;
     color: white;
     font-family: "Poppins";
     animation: slideIn 2s ease-in-out forwards; /* Animação */
 }
 .p3a {
-    font-size: 14px;
     color: #eaab03;
-    font-family: "Poppins";
 }
 .BTN {
     background: radial-gradient(circle, #df832e, #683409);
     margin-top: 40px;
-    height: 30px;
+    height: 40px;
     width: 60%;
     border: none;
     border-radius: 5px;
@@ -100,37 +103,28 @@ a {
     font-size: 13px;
     font-family: "Poppins";
 }
-.p4{
-    margin-top: 30px;
-    color: white;
-    font-family: 'Poppins';
-    font-size: 10px;
-}
-.p4a {
-    color: #d1b722;
-}
 .p5{
     color: white;
     font-family: "Poppins";
     font-size: 14px;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
-
 @media(max-width: 600px){
     #UpBar p {
         font-size: 10px;
     }
     #Primary{
-        background-image: url(./img/desgner\ mobille.jpg);
-        background-size: cover;
         width: 100%;
         height: 100vh;
     }
     #TxtPrimary {
-        padding-top: 100px;
         color: white;
-        width: 99%;
-        height: 100vh;
+        width: auto;
+        margin-left: 0;
+    }
+    #ImgMoniqui {
+        display: none;
     }
     .p1 {
         font-size: 13px;    
@@ -143,7 +137,7 @@ a {
     .BTN {
         margin-top: 20px;
         height: 35px;
-        width: 80%;
+        width: 60%;
     }
     .BTN a {
         font-size: 10px;
@@ -151,17 +145,15 @@ a {
     }
     .p5{
         font-size: 12px;
-        margin-top: 40px;
     }
 }
 #DataBar {
     width: 100%;
     text-align: center;
     background: radial-gradient(circle, #df832e, #683409);
-    height: 100px;
+    height: 60px;
 }
 #Data {
-    padding-top: 20px;
     width: 30%;
     margin-left: 35%;
     display: flex;
@@ -171,13 +163,13 @@ a {
 }
 
 .txtData {
+    margin-top: -10px;
     font-size: 11px;
     font-family: "Poppins";
-    font-weight: 0;
 }
 .time {
     font-family: "Poppins";
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 29px;
     color: white;
     width: 20%;
@@ -195,30 +187,6 @@ a {
         font-size: 9px;
     }
 }
-#MoveVsl{
-    width: 100%;
-    height: 100vh;
-    background-image: url(./img/backgrund02.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#ConteudoVSL {
-    width: 100%;
-    height: auto;
-}
-.DivVsl {
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-    padding-bottom: 20px;
-}
-#pTitle02 {
-    font-family: 'Lucidity';
-    padding-top: 10px;
-    font-size: 18px;
-    color: #eaab03;
-}
 
 @keyframes slideIn {
   0% {
@@ -230,142 +198,36 @@ a {
     transform: translateX(0);
   }
 }
-#subTitle02{
-    font-family: "Poppins";
-    line-height: 30px;
-    margin-top: 20px;
-    font-family: 14px;
-    color: white;
-    
-}
-
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.subRed{
-    background: linear-gradient(to right, #bf0f30, #731d2c);
-}
-.TheMovie{
-    width: 80%;
-    margin-left: 10%;
-    height: 100%;
-}
-#Move {
-    border-radius: 10px;
-    width: 90%;
-    height: 380px;
-}
-@media(max-width:600px){
-    .DivVsl {
-        margin-left: 5%;
-        width: 90%;
-    }
-    .TheMovie{
-        width: 100%;
-        margin-left: 0;
-    }
-    #Move {
-        border-radius: 10px;
-        width: 90%;
-        height: 300px;
-    }
-}
-#section03 {
+#Quadradinhos{
     width: 100%;
     height: 100vh;
-    background-image: url(./img/backgrund03.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
-#ContentSection03 {
-    width: 50%;
-    margin-left: 50%;
-    height: 100vh;
-}
-.pContentsection03 {
-    padding-top: 80px;
-    color: white;
-    font-family: "Poppins";
-    font-size: 27px;
-    margin-bottom: 80px;
-}
-#BtunSection03{
-    width: 60%;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    background: radial-gradient(circle, #df832e, #683409);
-    animation: wave 3s infinite;
-}
-#BtunSection03 a {
-    font-family: "Poppins";
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
-    
-}
-@media(max-width: 600px){
-    #section03{
-        background-image: url(./img/backgrundmobile03.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #ContentSection03 {
-        width: 80%;
-        margin-left: 10%;
-        height: 100vh;
-    }
-    .pContentsection03 {
-        margin-left: 10px;
-        padding-top: 180px;
-        color: white;
-        font-family: "Poppins";
-        font-size: 18px;
-        margin-bottom: 80px;
-    }
-    #BtunSection03{
-        width: 90%;
-        height: 40px;
-        border: none;
-        border-radius: 5px;
-        background: radial-gradient(circle, #df832e, #683409);
-    }
-}
-body #Quadradinhos{
-    width: 100%;
-    height: 100vh;
-    background-image: url(./img/quadradinhos.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#QuadradinhosContainer {
+#titles {
     padding-top: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
-    margin-left: 5%;
+    justify-content: space-around;
+    margin-left: 10%;
+    width: 80%;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 18px;
 }
-
+#QuadradinhosContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
+}
 .Quadradinhos {
-    width: 40%;
+    width: 50%;
     height: auto;
 }
-
 .quadradinhos3{
     display: flex;
     flex-direction: row;
-    margin-bottom: 30px;
+    margin-TOP: 30px;
     width: 100%;
     justify-content: space-around;
 }
@@ -384,7 +246,6 @@ body #Quadradinhos{
     border-color:#723320;
 
 }
-
 .Pquadradro {
     margin-left: 3px;
     padding-top: 20px;
@@ -402,12 +263,22 @@ body #Quadradinhos{
 }
 #QuadradinhosBTN {
     color: white;
-    padding-top: 20px;
     text-align: center;
     width: 50%;
     margin-left: 25%;
 }
+#IMGBnt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+} 
+#IMGBnt img {
+    width: 80px;
+    height: 80px;
+}
 #QuadradinhosBTN p {
+    margin-top: 30px;
     font-family: "Poppins";
 }
 #QuadradinhosBTN .larg {
@@ -416,891 +287,32 @@ body #Quadradinhos{
 #QuadradinhosBTN  button {
     height: 35px;
     background: linear-gradient(135deg, #bf0f30, #ff583327);
-
 }
 @media(max-width: 800px){
+    #titles {
+        font-size: 10px;
+    }
     body #Quadradinhos{
         height: auto;
     }
     #QuadradinhosContainer {
+        margin-left: 0;
+        width: 100%;
         display: flex;
         flex-direction: column;
     }    
     .Quadradinhos {
-
         width: 100%;
         height: auto;
     }  
-    #QuadradinhosBTN {padding-bottom: 30px;
-    }  
-}
-#Section04 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(img/backgrund04.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#DivSection04{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: radial-gradient(circle, #df832e, #683409); 
-}
-.ContentDivSection04 {
-    width: 40%;
-    text-align: center;
-}
-#ImgDivSection04 {
-    width: 30%;
-}
-#Psection04 {
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: start;
-    font-family:'Poppins';
-    font-size: 21px;
-}
-@media(max-width: 600px){
-    #ImgDivSection04 {
-        padding-top: 10px;
-        width: 50%;
-    }
-    .ContentDivSection04 {
-        width: 40%;
-        text-align: center;
-    }
-    #Psection04 {
-        font-size: 10px;
-    }
-
-}
-#conteinerSection04 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    padding-top: 30px;
-}
-.contentsection04 {
-    padding-top: 50px;
-    width: 45%;
-}
-#pTxtSection04 {
-    font-size: 18px;
-    font-family: "Lucidity";
-    color: #eaab03;
-    margin-bottom: 60px;
-}
-#pTxtSection0402 {
-    color: white;
-    font-family: "Poppins";
-    font-size: 18px;
-}
-.container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 10px;
-}
-.subConteiner {
-    border: solid 1px rgba(250, 250, 250, 0.212);
-    border-radius: 10px;
-    text-align: center;
-    width: 20%;
-    background: linear-gradient(90deg, #ffffff00, #746f6f);
-}
-.ImgSubconteiner {
-    padding-top: 10px;
-    width: 50%;
-}
-.pSubConteiner{
-    font-family: "Poppins";
-    color: white;
-    font-size: 12px;
-    padding-bottom: 5px;
-}
-@media(max-width:600px){
-    #conteinerSection04 {
-        display: flex;
-        flex-direction: column;
-    }
-    .contentsection04 {
-        padding-top: 50px;
-        width: 90%;
-        margin-left: 5%;
-    }
-    .subConteiner {
-        width: 24%;
-    }
-    .pSubConteiner{
-        font-family: "Poppins";
-        color: white;
-        font-size: 10px;
-        padding-bottom: 5px;
-    }
-    #Section04 {
-        height: auto;
-    }#TXTsection04 {
-        margin-bottom: 30px;
-    }
-}
-#section05 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(./img/backgrund05.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#DivSection05 {
-    padding-top: 50px;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#DivSection05 p {
-    padding-top: 10px;
-    font-family: "Poppins";
-    text-align: start;
-    margin-left: 10px;
-    font-size: 21px;
-    color: white;
-}
-#BtnSection05{
-    margin-top: 30px;
-    width: 40%;
-    height: 45px;
-    border: none;
-    border-radius: 5px;
-    background: linear-gradient(to right, #bf0f30, #731d2c);
-    animation: wave 2s infinite;
-}
-#BtnSection05 a {   
-    font-family: "Poppins";
-    font-size: 14px;
-    color: white;
-
-}
-@media(max-width: 600px){
-    #section05 {
-        width: 100%;
-        height: 100vh;
-        background-image: url(./img/backgrundmobile05.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }#DivSection05 {
-        text-align: center;
-        display: flex;
-        height: 500px;
-        flex-direction: column;
-    }
-    #BtnSection05{
-        margin-top: -90px;
-        width: 80%;
-        margin-left: 10%;
-        height: 45px;
-    }
-    #DivSection05 {
-        padding-top: 10px;
-    }
-}
-#section06{
-    width: 100%;
-    height: 100vh;
-    background-image: url(img/backgrund06.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#TitleSection06 {
-    padding-top: 20px;
-    text-align: center;
-    font-size: 22px;
-    font-family: "Lucidity";
-    color: #eaab03;
-}
-#Depoimentos {
-    margin-top: 100px;
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.Dep {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 20%;
-    border-radius: 5px;
-    border: solid 1px rgba(255, 255, 255, 0.349);
-    background: linear-gradient(90deg, #ffffff00, #746f6f);
-
-}
-@media(max-width:600px){
-    #Depoimentos {
-        width: 90%;
-        margin-left: 5%;
-        display: flex;
-        flex-direction: column;
-    }
-    .Dep {
-        width: 80%;
-        margin-left: 10%;
-        margin-bottom: 30px;
-    }
-    #section06{
-        width: 100%;
-        height: auto;
-    }
-}
-.Dep img {
-    width: 20%;
-    float: left;
-    margin-top: 10px;
-    margin-left: 10px;
-    
-}
-.nome{
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    text-align: left;
-    color: white;
-    font-size: 11px;
-    font-weight: 600;
-    font-family: "Poppins";
-}
-.TxtDep {
-    color: white;
-    text-align: left;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    font-size: 11px;
-    font-family: "Poppins"
-}
-#ButtonSection06{
-    cursor: pointer;
-    margin-top: 80px;
-    width: 40%;
-    margin-left: 30%;
-    margin-bottom: 20px;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-    background-color: #746f6f;
-    background: radial-gradient(circle at center, #df832e, #683409);
-    animation: wave 3s infinite;
-}
-#ButtonSection06 a {
-    color: white;
-    font-weight: 600;
-    font-size: 15px;
-    font-family: "Poppins";
-}
-@media(max-width:600px){
-    #ButtonSection06{
-        width: 80%;
-        margin-left: 10%;
-    }
-    #ButtonSection06 a {
-        font-size: 10px;
-    }
-}
-#Section07 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(./img/backgrundbio.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#ImgMoniqui{
-    width: 40%;
-    background-image: url(./img/MoniquiBioImg.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-}
-#ImgMoniqui img {
-    margin-top: 17px;
-    float: right;
-    width: 90%
-    
-}
-#BioMoniquiAgnes{
-    margin-left: 50px;
-    width: 40%;
-}
-#TitleBioMoniquiAgnes {
-    text-align: center;
-    padding-top: 50px;
-    font-family: "Lucidity";
-    font-size: 25px;
-    color: #eaab03;
-}
-#PDivBio {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: left;
-    width: 80%;
-    margin-left: 20%;
-    height: auto;
-}
-.DivDivPBIo {
-    width: 100%;
-    display:  flex;
-    flex-direction: row;
-}
-#Diamond{
-    width: 30px;
-    height: 30px;
-    padding: 5px ;
-}
-#txtBio {
-    margin-bottom: 20px;
-    font-size: 12px;
-    color: white;
-    font-family: "Poppins";
-}
-#BioBtn{
-    width: 100%;
-    text-align: center;
-    color: white;
-    padding-bottom: 10PX;
-    font-family: "Poppins";
-}
-#BioBtn button {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
-}
-
-@media(max-width:800px) {
-    #Section07 {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }    
-    #BioMoniquiAgnes{
-        margin-left: 5%;
-        width: 90%;
-        margin-bottom: 20px;
-    }
-    #PDivBio {
-        width: 80%;
-        margin-left: 10%;
-    }
-    #txtBio {
-        text-align: center;
-    }
-    #ImgMoniqui {
-        display: none;
-    }
-}
-#Section08{
-    width: 100%;
-    height: 100vh;
-    background-image: url(./img/backgrund07.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#PtitleSection07 {
-    padding-top: 30px;
-    color: #eaab03;
-    font-size: 22px;
-    font-family: "Lucidity";
-    text-align: center;
-}
-#ButtonSection08 {
-    margin-top: 20px;
-    height: 35px;
-    width: 40%;
-    margin-left: 30%;
-    border-radius: 5px;
-    border: none;
-    background: radial-gradient(circle at center, #df832e, #683409);
-    animation: wave 3s infinite;
-}
-#ButtonSection08 a {
-    text-decoration: none;
-    color: white;
-    font-family: "Poppins";
-    font-size: 15px;
-}
-@media(max-width:600px){
-    #ButtonSection08 {
-        width: 80%;
-        margin-left: 10%;
-        animation: none;
-    }
-}
-#Shorts {
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.DivShost {
-    width: 20%;
-    height: 400px;
-}
-.DivShost iframe {
-    width: 100%;
-    height: 400px;
-}
-@media(max-width: 600px){
-    #Shorts {
-        display: flex;
-        flex-direction: column;
-    }
-    .DivShost {
-        width: 80%;
-        margin-left: 10%;
-        margin-bottom: 30px;
-        height: 400px;
-    }
-    #Section08{
-        height: auto;
-    }
-}
-#Section09 {
-    width: 100%;
-    height: auto;
-    background-image: url(./img/backgrund09.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#TitleSection09 {
-    text-align: center;
-    padding-top: 10px;
-    font-family: "Lucidity";
-    font-size: 22px;
-    color: #eaab03;
-    margin-bottom: 10px;
-}
-#SubTitileSection09{
-    text-align: center;
-    font-family: "Poppins";
-    font-size: 14px;
-    color: #f5dfa4;
-}
-#DivParaQuem {
-    margin-top: 30px;
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 30px;
-}
-.ConteudoParaQuem {
-    width: 45%;
-    height: auto;
-}
-.LogoInfo{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-}
-.LogoInfo img {
-    width: 20%;
-
-}
-.PInfo {
-    padding-top: 5px;
-    font-family: "Poppins";
-    font-size: 17px;
-    font-weight: 600;
-    color: #f5dfa4;
-}.PInfo D {
-    color: #eaab03;
-}
-#Info01{
-    background: linear-gradient(135deg, #bf0f30, #731d2c);
-}
-#Info02{
-    background: linear-gradient(135deg, #bf0f30, #1e1416);
-}
-.TheInfo{
-    margin-top: 20px;
-    border-radius: 10px;
-}
-.LineInfo{
-    width: 90%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 10PX;
-}
-.LineInfo img {
-    margin-top: 10px;
-    margin-right: 5px;
-    width: 30px;
-    height: 20px;
-}
-.pLineInfo {
-    font-family: "Poppins";
-    color: white;
-}
-@media(max-width:600px) {
-    #DivParaQuem {
-        margin-top: 30px;
-        width: 100%;
-        margin-left: 0%;
-        display: flex;
-        flex-direction: column;
-    }
-    .ConteudoParaQuem {
-        margin-top: 20px;
-        width: 90%;
-        margin-left: 5%;
-        height: auto;
-    }
-    .LogoInfo img {
-        width: 20%;
+    #QuadradinhosBTN {
+        padding-bottom: 30px;
     } 
-}
-#Section10 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(./img/backgrund07.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#FAQ{
-    padding-top: 10px;
-    width: 90%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 30px;
-}
-#DiSection10Title {
-    width: 25%;
-}
-#Psection10 {
-    padding-top: 100px;
-    font-family: "Lucidity";
-    font-size: 22px;
-    color: white;
-}#Psection10 D {
-    color: #eaab03;
-}
-#Questions {
-    margin-top: 30px;
-    width: 50%;
-    border: solid 1px rgba(255, 255, 255, 0.247);
-}
-.Pergunta {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 1px solid;
-    border: solid 1px rgba(255, 255, 255, 0.247);
-    font-family: "Poppins";
-    color: white;
-    font-size: 18px;
-}
-.txtpergunta {
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.setaimg {
-    margin-top: 10px;
-    margin-right: 10px;
-    width: 20px;
-    height: 10px;
-}
-.DivReponse {
-    width: 100%;
-    height: auto;
-    font-family: "Poppins";
-    font-size: 12px;
-    color: white;
-    display: none;
-}
-.DivReponse p {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-@media(max-width: 600px){
-    #Section10{
-        height: auto;
-    }
-    #FAQ{
-        display: flex;
-        flex-direction: column;
-    }  
-    #DiSection10Title {
-        width: 80%;
-        margin-left: 10%;
-        margin-bottom: 50px;
-    }
-    #Questions {
-        width: 80%;
-        margin-left: 10%;
-    }
-}
-#Section11 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(./img/backgrund07.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#DivSection11 {
-    padding-top: 80px;
-    width: 90%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 30px;
-}
-.ConteudoSection11 {
-    width: 45%;
-}
-.ConteudoSection11 iframe {
-    width: 100%;
-    height: 500px;
-}
-.ConteudoSection11 p {
-    padding-top: 180px;
-    font-size: 30px;
-    font-family: "Lucidity";
-    color: #eaab03;
-}
-@media(max-width:600px){
-    #Section11 {
-        height: auto;
-    }
-    #DivSection11 {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .ConteudoSection11 {
-        width: 100%;
-    }
-    .ConteudoSection11 iframe {
-        width: 100%;
-        height: 500px;
-    }
-    .ConteudoSection11 p {
-        padding-top: 0;
+    #QuadradinhosBTN {
+        color: white;
         text-align: center;
-        padding-bottom: 100px;
-    }
-}
-#Section12 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(img/backgrund12.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#TitleSection12 {
-    padding-top: 50px;
-    text-align: center;
-    font-family:"Lucidity";
-    font-size: 20px;
-    color: white;
-    padding-bottom: 20px;
-}
-
-#DivSection12 {
-    margin-top: 10px;
-    width: 90%;
-    margin-left: 5%;
-}
-.imgsSection12 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    animation: wave 3s infinite;
-}
-.imgsSection12 img {
-    width: 30%;
-}
-@media(max-width: 600px){
-    #Section12 {
-        height: auto;
-    }
-    #TitleSection12 {
-        font-size: 20px;
-    }
-    #IMGSEctio02  {
-        display: none;
-    }
-    #IMGSEctio01 {
-        display: flex;
-        flex-direction: column;
-    }
-    .imgsSection12 img {
-        margin-left: 20%;
-        width: 60%;
-        margin-bottom: 10px;
-    }
-}
-#RedBar {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to right, #bf0f30, #731d2c);
-}
-#PRedBar {
-    padding-top: 25px;
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    font-family: "Poppins";
-    font-weight: 900;
-    animation: wave 3s infinite;
-}
-@media(max-width:600px){
-    #PRedBar {
-        font-size: 20px;
-    }
-}
-#Section13 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(img/backgrunform.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#DivSection13 {
-    padding-top: 80px;
-    width: 90%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.ContentDivSection13 {
-    width: 40%;
-    height: auto;
-}
-#PTitleSection13 {
-    padding-top: 10px;
-    font-family: "Lucidity";
-    font-size: 22px;
-    color: #eaab03;
-    padding-bottom: 10px;
-}
-#PSub {
-    font-size: 14px;
-    font-family: "Poppins";
-    color: white;
-    padding-bottom: 20px;
-}
-.Contato {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-}
-.Contato p {
-    font-family: "Poppins";
-    font-size: 14px;
-    color: white;
-    margin-left: 5px;
-    margin-top: 10px;
-}
-.imgForm {
-    width: 30px;
-}
-#UltimoP {
-    font-family: "Poppins";
-    font-size: 14px;
-    color: white;
-}
-#Redirecv{
-    margin-top: 20px;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#Redirecv img {
-    width: 30px;
-}
-#Form {
-    display: flex;
-    flex-direction: column;
-}
-.input {
-    background-color: #fafafa9f;
-    width: 90%;
-    border: none;
-    height: 40px;
-    margin-bottom: 20px;
-}
-.DD {
-    background-color: #fafafa8c;
-    width: 70%;
-    border: none;
-    height: 40px;
-    margin-bottom: 20px;
-}
-#ARea {
-    height: 80px;
-}
-#Form button {
-    width: 70%;
-    background: linear-gradient(to right, #bf0f30, #731d2c);
-    border: none;
-    border-radius: 5px;
-    height: 40px;
-}
-#Form button a {
-    color: white;
-    font-family: "Poppins";
-    font-size: 15px;
-}
-@media(max-width: 600px){
-    #Section13 {
-        height: auto;
-    }
-    #DivSection13 {
-        width: 100%;
-        margin-left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .ContentDivSection13 {
-        margin-left: 5%;
         width: 90%;
-        height: auto;
-        padding-bottom: 40px;
+        margin-left: 5%;
     }
 }
 footer {
