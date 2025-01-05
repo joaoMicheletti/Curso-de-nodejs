@@ -18,4 +18,7 @@ function Register(){
         alert('Preencha o campo Reguião !')
     }
     console.log(name, email, contato, regiao, msg);
+
+    
+    window.location.href = "https://metodologiamentecampea.com.br/tkupage.htmll";
 };
