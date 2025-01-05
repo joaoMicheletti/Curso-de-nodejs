@@ -82,7 +82,7 @@ a {
 }
 #ImgMoniqui img {
     position: absolute;
-    bottom: 0;
+    bottom: -16px;
 }
 #title {
     margin-top: 20px;
@@ -262,10 +262,14 @@ a {
     background: radial-gradient(circle, #df832e, #683409);
     animation: wave 2s infinite;
 }
+#BtnSection02 a {
+    color: white;
+}
 #contentDivSection02 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-bottom: 30px;
 }
 .content {
     color: white;
@@ -323,6 +327,93 @@ a {
         margin-left: 10px;
     }
 }
+#Section03 {
+    width: 100%;
+    height: auto;
+    background-image: url(./img/form.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#DivSection03 {
+    padding-top: 80px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+#Fomrulario {
+    border: solid 1px white;
+    margin-bottom: 30px;
+}
+.DivFormulario{
+    width: 30%;
+    margin-right: 10%;
+}
+#Form {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@media(max-width: 800px){
+    #Section03 {
+        width: 100%;
+        height: auto;
+        background-image: none;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #DivSection03 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .DivFormulario {
+        margin-left: 0%;
+        width: 100%;
+    }
+    #IMGForm  {
+        border: #27633f;
+        text-align: center;
+    }   
+    #Form {
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+.InputForm {
+    width: 90%;
+    margin-left: 5%;
+    height: 45px;
+    background-color: #cac6c6;
+    border: none;
+    margin-bottom: 20px;
+}
+.pForm {
+    margin-left: 5%;
+    font-family: "Poppins";
+    font-size: 15px;
+    color: white;
+    
+}
+#BtnForm {
+    height: 45px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-size: 15px;
+    color: white;
+    background: radial-gradient(circle, #df832e, #683409);
+}
 #Quadradinhos{
     width: 100%;
     height: 100vh;
@@ -335,7 +426,8 @@ a {
     margin-left: 10%;
     width: 80%;
     color: white;
-    font-family: 'Poppins';
+    font-family: sans-serif;
+    font-weight: 900;
     font-size: 18px;
 }
 #QuadradinhosContainer {
@@ -373,6 +465,7 @@ a {
 }
 .Pquadradro {
     margin-left: 10px;
+    margin-right: 10px;
     padding-top: 20px;
     padding-bottom: 5px;
     font-family: "Poppins";
@@ -381,6 +474,7 @@ a {
 }
 .Pcorpo {
     margin-left: 10px;
+    margin-right: 10px;
     font-size: 10px;
     font-family: "Poppins";
     color: white;
@@ -420,20 +514,18 @@ a {
         justify-content: space-between;
         margin-left: 10%;
         width: 80%;
-        font-size: 10px;
+        font-size: 11px;
     }
     body #Quadradinhos{
         height: auto;
     }
     #QuadradinhosContainer {
-        background-color: #ffffff;
         margin-left: 0;
         width: 100%;
         display: flex;
         flex-direction: row;
     }    
     .Quadradinhos {
-        background-color: black;
         width: 100%;
         height: auto;
     }.quadradinhos3 {
@@ -452,6 +544,73 @@ a {
         text-align: center;
         width: 90%;
         margin-left: 5%;
+    }
+}
+#Section05 {
+    width: 100%;
+    height: auto;
+}
+#DivSection05 {
+    display: flex;
+    flex-direction: row;
+}
+#MoniquiBio {
+    width: 50%;
+}
+#Moniqui {
+    width: 50%;
+}
+#TxtxMoniquiBio {
+    margin-top: 150px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+.txtImg {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+#TitleSection05 {
+    text-align: center;
+    font-family: "Lucidity-Expand";
+    color: #eaab03;
+    font-size: 45px;
+}
+.IMGTXT {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}.txtImg p{
+    font-family: "Poppins";
+    font-size: 13px;
+    padding: 5px;
+    color: white;
+}
+#BTNBio a {
+    color: white;
+}
+#BTNBio {
+    cursor: pointer;
+    color: white;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 50px;
+    height: 45px;
+    width: 80%;
+    margin-left: 10%;
+    background: radial-gradient(circle, #df832e, #683409);
+    border: none;
+    border-radius: 10px;
+}
+@media(max-width: 800px){
+    #MoniquiBio {
+        width: 100%;
+    }
+    #Moniqui {
+        display: none;
     }
 }
 footer {
