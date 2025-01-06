@@ -20,5 +20,5 @@ function Register(){
     console.log(name, email, contato, regiao, msg);
 
     
-    window.location.href = "https://metodologiamentecampea.com.br/tkupage.htmll";
+    window.location.href = "https://metodologiamentecampea.com.br/tkupage.html";
 };
