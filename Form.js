@@ -1,24 +1,25 @@
-function Register(){
-    var name = document.querySelector("#name").value;  
-    var email = document.querySelector("#email").value;
-    var contato = document.querySelector("#contato").value;
-    var regiao = document.querySelector("#regiao").value;
-    var msg = document.querySelector("#ARea").value;
+function Register(event) {
+    // Previne o envio padrão do formulário
+    event.preventDefault();
 
-    
-    if(name.length == 0){
-        alert('Preencha o campo Nome e Sobrenome!')
-    } else if(email.length == 0){
-        alert('Preencha o campo E-mail!')
-    }
-    else if(contato.length == 0){
-        alert('Preencha o campo Contato!')
-    }
-    else if(regiao.length == 0){
-        alert('Preencha o campo Reguião !')
-    }
-    console.log(name, email, contato, regiao, msg);
+    // Seleciona o formulário e os campos
+    const form = document.getElementById('Form');
+    const fields = {
+        nome: form.nome.value.trim(),
+        email: form.email.value.trim(),
+        celular: form.celular.value.trim(),
+        regiao: form.regiao.value.trim(),
+        mensagem: form.mensaguem.value.trim()
+    };
 
-    
+    // Verifica se algum campo está vazio
+    for (const [field, value] of Object.entries(fields)) {
+        if (value === '') {
+            alert('Por favor, preencha todos os campos!');
+            return; // Interrompe a execução caso encontre um campo vazio
+        }
+    }
+
+    // Se todos os campos estiverem preenchidos, redireciona
     window.location.href = "https://metodologiamentecampea.com.br/tkupage.html";
-};
+}
