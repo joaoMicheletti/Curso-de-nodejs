@@ -109,19 +109,19 @@
     <section id="Section03">
         <div id="DivSection03">
             <div id="Fomrulario" class="DivFormulario">
-                <div id="Form" >
+                <form id="Form" >
                     <p class="pForm">Digite seu nome e sobre nome</p>
                     <input class="InputForm"  id="name" name=""/>
                     <p class="pForm">Digite o seu e-mail ativo</p>
-                    <input class="InputForm" id="email" name=""/>
+                    <input type="email" class="InputForm" id="email" name="email"/>
                     <p class="pForm">Digite o seu contato</p>
                     <input class="InputForm" id="contato" name=""/>
                     <p class="pForm">Digite a sua região</p>
                     <input class="InputForm" id="regiao" name=""/>
                     <p class="pForm">Mensagem</p>
                     <input class="InputForm" id="ARea" name=""/>
-                </div>
-                <button onclick="Register()" id="BtnForm">Enviar dados com sucesso</button>
+                </form>
+                <button type="submit" onclick="Register()" id="BtnForm">Enviar dados com sucesso</button>
             </div>
             <div id="IMGForm" class="DivFormulario">
                 .
@@ -248,6 +248,7 @@
         </div>
         
     </footer>
+    <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/3874f799-97c4-466f-866b-ba81ddb13742-loader.js" ></script>
     <script src="./Form.js"></script>
     <script src="./script.js"></script>
 </body>
