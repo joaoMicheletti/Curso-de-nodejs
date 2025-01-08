@@ -20,6 +20,13 @@ function Register(event) {
         }
     }
 
-    // Se todos os campos estiverem preenchidos, redireciona
+    // Validação do celular com DDD
+    const celularRegex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+    if (!celularRegex.test(fields.celular)) {
+        alert('Por favor, insira um número de celular válido com DDD (ex: (11) 91234-5678).');
+        return;
+    }
+
+    // Se todos os campos forem válidos, redireciona
     window.location.href = "https://metodologiamentecampea.com.br/tkupage.html";
 }
