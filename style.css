@@ -96,15 +96,19 @@ a{
 @media(max-width:800px){
     #Primary  {
         width: 100%;
-        height: 100vh;
+        height: auto;
         background-image: url(./img/mobile01.webp);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     #ContainerPrimary {
+        margin-top: 230px;
         width: 90%;
         margin-left: 5%;
+    }
+    #TitleIMG {
+        width: 100%;
     }
     #BtnPrimary{
         width: 90%;
@@ -207,6 +211,8 @@ a{
     float: right;
 }
 #ButtonSection02 {
+    font-weight: 600;
+    color: white;
     font-family: "Poppins";
     font-weight: 600;
     font-size: 16px;
@@ -475,9 +481,9 @@ YELLOW {
     width: 50%;
 }
 .DivContainerSection04 #imgMoniqui {
-    width: 90%;
+    width: 70%;
     height: 90%;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 .DivContainerSection04    #IMGMONIQUI {
@@ -529,7 +535,7 @@ YELLOW {
         width: 100%;
     }
     .DivContainerSection04    #IMGMONIQUI {
-        margin-top: 50px;
+        margin-top: 0px;
     }
     .bio {
         width: 90%;
