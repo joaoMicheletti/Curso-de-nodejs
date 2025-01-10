@@ -44,7 +44,7 @@ a{
 }
 #Primary {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-image: url(./img/backgrund01.webp);
     background-position: center center;
     background-repeat: no-repeat;
@@ -62,6 +62,8 @@ a{
     color: #fcc077;
 }
 #ContainerPrimary {
+    margin-top: 100px;
+    padding-bottom: 50px;
     width: 50%;
     margin-left: 10%;
 }
@@ -70,7 +72,7 @@ a{
     margin-bottom: 50px;
 }
 #P1 {
-    font-size: 12px;
+    font-size: 15px;
     color: white;
 }.subli {
     text-decoration: underline;
@@ -192,7 +194,7 @@ a{
     width: 50%;
 }.DivContainerP {
     font-family: "Poppins";
-    font-size: 12px;
+    font-size: 18px;
     color: white;
     line-height: 20px;
     margin-bottom: 30px;
@@ -221,7 +223,8 @@ a{
     margin-left: 10%;
     border: none;
     border-radius: 5px;
-    margin-top: 50px;
+    margin-top: 4px;
+    margin-bottom: 50px;
     background: linear-gradient(135deg, #79490a, #e19410, #fac678, #b27817, #dda13b);
 }
 K {
@@ -252,9 +255,12 @@ K {
         margin-bottom: 50px;
         width: 100%;
     }
+    #IMGCorrent {
+
+    }
     #IMGCorrent img {
-        width: 50%;
-        margin-right: 25%;
+        width: 80%;
+        margin-right: 5%;
     }
 }
 
@@ -272,7 +278,7 @@ K {
 }
 #TitleSectionQuadradinhos {
     font-family: "Poppins";
-    font-size: 20px;
+    font-size: 23px;
     color: white;
     text-align: center;
     padding-top: 80px;
@@ -304,7 +310,7 @@ YELLOW {
     padding: 20px;
     border-radius: 10px;
 }.QuadradoPTitle {
-    font-size: 18px;
+    font-size: 15px;
     font-family: "Poppins";
     font-weight: 600;
     color: white;
@@ -319,9 +325,9 @@ YELLOW {
 }
 @media(max-width:800px){
     .QuadradoPTitle {
-        font-size: 10px;
+        font-size: 13px;
         font-family: "Poppins";
-        font-weight: 600;
+        font-weight: 900;
         color: white;
         margin-bottom: 10px;
     }.QuadradoPCorpo {
@@ -337,7 +343,7 @@ YELLOW {
     }
 }
 #escolhaseulado {
-    font-size: 10px;
+    font-size: 15   px;
     color: white;
     font-family: "Poppins";
     display: flex;
@@ -577,6 +583,7 @@ YELLOW {
         margin-left: 10%;
     }
     #PTitlemetodo  {
+        font-size: 18px;
         text-align: center;
     }
     #SectionRoda {
