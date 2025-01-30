@@ -658,6 +658,7 @@ LogoInfo img {
     margin-left: 10%;
 }
 #TitleLotes img {
+    margin-top: 20px;
     width: 80px;
 }
 #TitleLotes p {
@@ -983,6 +984,7 @@ LogoInfo img {
 
 @media(max-width: 800px) {
     #DivSection13 {
+        text-align: center;
         padding-top: 80px;
         width: 90%;
         height: 100vh;
