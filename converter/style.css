@@ -220,7 +220,7 @@ a {
     #MoveVsl{
         width: 100%;
         height:auto;
-        background-image: url(./img/backgrund02.png);
+        background-image: url(_img/fundovsl.webp);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
