@@ -1,0 +1,1030 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Lucidity';
+    src: url(./fonts/Lucidity-Expand.ttf) format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#Primary{
+    background-image: url(./_img/HomeBack.webp);
+    background-position:  center center;
+    background-repeat:  no-repeat;
+    background-size:  cover;
+    width: 100%;
+    height: 100vh;
+}
+#Upbar {
+    font-family: "Poppins";
+    font-size: 16px;
+    color: #d68a0e;
+    height: 35px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#ConteudoHome{
+    width: 50%;
+    height: 100vh;
+    padding: 5%;
+}
+#p1 {
+    margin-top: 30px;
+    font-family: "Poppins";
+    font-size: 14px;
+    color: white;
+} #p1  d {
+    font-weight: 600;
+    color: #f5dfa4;
+}
+#p2 {
+    margin-top: 50px;
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+}
+#p2 img {
+    margin-bottom: -8px;
+    padding: 5px;
+}
+#QuadradosHome {
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.quadradinhoHome{
+    text-align: center;
+    padding: 5px;
+    width: 30%;
+    background: linear-gradient(135deg, #df832e, #683409);
+    font-family: "Poppins";
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+@media(max-width: 800px){
+    #Primary{
+        background-image: url(./_img/HomeMobile.webp);
+        background-position:  center center;
+        background-repeat:  no-repeat;
+        background-size:  cover;
+        width: 100%;
+        height: auto;
+    }
+    #Upbar {
+        font-size: 14px;
+    }
+    #LogoHome {
+        width: 80%;
+    }
+    #ConteudoHome{
+        width: 100%;
+        height: auto;
+        padding: 10%;
+    }
+    #QuadradosHome {
+        width: 100%;
+    }
+    .quadradinhoHome{
+        font-size: 8px;
+    }
+
+}
+
+#DataBar {
+    width: 100%;
+    text-align: center;
+    background: radial-gradient(circle, #df832e, #683409);
+    height: 80px;
+}
+#Data {
+    padding-top: 5px;
+    width: 30%;
+    margin-left: 35%;
+    display: flex;
+    height: 90px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.txtData {
+    font-size: 11px;
+    font-family: "Poppins";
+    font-weight: 0;
+}
+.time {
+    font-family: "Poppins";
+    padding-top: 10px;
+    font-size: 29px;
+    color: white;
+    width: 20%;
+    height: 90px;
+}
+.number{
+    font-weight: 900;
+    font-family: "Montserrat";
+}
+@media(max-width: 600px){
+    #Data {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .txtData {
+        font-size: 9px;
+    }
+}
+#MoveVsl{
+    width: 100%;
+    height: 100vh;
+    background-image: url(_img/fundovsl.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#ConteudoVSL {
+    width: 100%;
+    height: auto;
+}
+.DivVsl {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#pTitle02 {
+    font-family: 'Lucidity';
+    padding-top: 50px;
+    font-size: 18px;
+    color: #eaab03;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#subTitle02{
+    font-family: "Poppins";
+    line-height: 30px;
+    margin-top: 20px;
+    font-family: 14px;
+    color: white;
+    
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.subRed{
+    background: linear-gradient(to right, #bf0f30, #731d2c);
+}
+.TheMovie{
+    width: 80%;
+    margin-left: 10%;
+    height: 100%;
+}
+#Move {
+    margin-top: 50px;
+    border-radius: 10px;
+    width: 90%;
+    height: 380px;
+}
+@media(max-width:800px){
+    #MoveVsl{
+        width: 100%;
+        height:auto;
+        background-image: url(./img/backgrund02.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .DivVsl {
+        margin-left: 5%;
+        width: 90%;
+    }
+    .TheMovie{
+        width: 100%;
+        margin-left: 0;
+    }
+    #Move {
+        border-radius: 10px;
+        width: 90%;
+        height: 300px;
+    }
+}
+#section03 {
+    width: 100%;
+    height: auto;
+    background-image: url(./_img/backgrund03.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#ContentSection03 {
+    text-align: center;
+    width: 50%;
+    margin-left: 40%;
+    height: auto;
+}
+
+#LogoSection03 {
+    margin-top: 50px;
+    width: 30%;
+}
+.pContentsection03 {
+    padding-top: 80px;
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+    margin-bottom: 80px;
+}
+.pContentsection03 d {
+    color: #f5dfa4;
+}
+#BtunSection03{
+    cursor: pointer;
+    width: 50%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background: radial-gradient(circle at 0% 0%, #79490a, #e19410, #fac678, #b27817, #dda13b);
+    animation: wave 3s infinite;
+}
+#BtunSection03 a {
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 600;
+    color: #4d3614;  
+}
+#TxtMeta {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Poppins";
+    color: white;
+    font-size: 15px;
+    padding: 30px;
+}
+@media(max-width:800px){
+    #ContentSection03 {
+        text-align: center;
+        margin-left: 5%;
+        width: 90%;
+        height: auto;
+    }
+}
+#Section04 {
+    width: 100%;
+    height: auto;
+    background-image: url(_img/section04back.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ContentDivSection04 {
+    width: 40%;
+    text-align: center;
+}
+#ImgDivSection04 {
+    width: 30%;
+}
+#Psection04 {
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: start;
+    font-family:'Poppins';
+    font-size: 21px;
+}
+@media(max-width: 800px){
+    #Section04 {
+        width: 100%;
+        height: 100vh;
+        background-image: url(_img/section04Mobile.webp);
+    }
+    #ImgDivSection04 {
+        padding-top: 10px;
+        width: 50%;
+    }
+    .ContentDivSection04 {
+        width: 40%;
+        text-align: center;
+    }
+    #Psection04 {
+        font-size: 10px;
+    }
+
+}
+#conteinerSection04 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 30px;
+}
+.contentsection04 {
+    padding-top: 50px;
+    width: 45%;
+}
+#pTxtSection04 {
+    font-size: 18px;
+    font-family: "Lucidity";
+    color: #eaab03;
+    margin-bottom: 30px;
+}
+#pTxtSection0402 {
+    color: white;
+    font-family: "Poppins";
+    font-size: 18px;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.subConteiner {
+    border: solid 1px rgba(250, 250, 250, 0.212);
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    background: linear-gradient(90deg, #ffffff00, #746f6f);
+}
+#Conhecimento {
+    margin-top: 5px;
+}
+.ImgSubconteiner {
+    padding-top: 10px;
+    width: 50%;
+}
+.pSubConteiner{
+    font-family: "Poppins";
+    color: white;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+#DinamicasContainer {
+    margin-left: 10%;
+    margin-top: 40px;
+    width: 80%;
+}
+#Dinamicas{
+    width: 50%;
+}
+.TitleDinamicas {
+    font-family: sans-serif;
+    color: #f9a01b;
+    font-weight: 900;
+    font-size: 21px;
+}
+.CorpoDinamicas{
+    margin-top: 5px;
+    padding: 30px;
+    font-family: "Montserrat";
+    font-size: 15px;
+    color: white;
+    line-height: 25px;
+}
+@media(max-width:800px){
+    .TitleDinamicas {
+        text-align: center;
+        font-family: sans-serif;
+        color: #f9a01b;
+        font-weight: 900;
+        font-size: 21px;
+    }
+    #DinamicasContainer {
+        margin-left: 5%;
+        margin-top: 90px;
+        width: 90%;
+    }
+    #Dinamicas{
+        width: 100%;
+    }
+    #conteinerSection04 {
+        display: flex;
+        flex-direction: column;
+    }
+    .contentsection04 {
+        padding-top: 50px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .subConteiner {
+        width: 24%;
+    }
+    .pSubConteiner{
+        font-family: "Poppins";
+        color: white;
+        font-size: 10px;
+        padding-bottom: 5px;
+    }
+    #Section04 {
+        height: auto;
+    }#TXTsection04 {
+        margin-bottom: 30px;
+    }
+}
+#ButtonSection08 {
+    margin-top: 20px;
+    height: 35px;
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 5px;
+    border: none;
+    background: radial-gradient(circle at center, #df832e, #683409);
+    animation: wave 3s infinite;
+}
+#ButtonSection08 a {
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+}
+@media(max-width:600px){
+    #ButtonSection08 {
+        width: 80%;
+        margin-left: 10%;
+        animation: none;
+    }
+}
+#Shorts {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.DivShost {
+    width: 20%;
+    height: 400px;
+}
+.DivShost iframe {
+    width: 100%;
+    height: 400px;
+}
+@media(max-width: 600px){
+    #Shorts {
+        display: flex;
+        flex-direction: column;
+    }
+    .DivShost {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 30px;
+        height: 400px;
+    }
+    #Section08{
+        height: auto;
+    }
+}
+LogoInfo img {
+    width: 20%;
+
+}
+#RecadoMoniqui {
+    width: 100%;
+    height: auto;
+    background-image: url(./_img/fundoRecado.webp);
+    background-position:  center center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#ContainerRecado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    width: 90%;
+    margin-left: 05%;
+    height: auto;
+    padding-bottom: 50px;
+}
+#DivRecado01{
+    width: 60%;
+}
+
+#ImgRecado {
+    padding-top: 100px;
+    width: 50%;
+    margin-left: 25%;
+    padding-bottom: 150px;
+}
+#SubContainer01 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#SubContainer02 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#RecadoInd {
+    color: white;
+    font-family: "Poppins";
+    font-size: 12px;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.SubContainer01 {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    font-family: "Poppins";
+    font-size: 12px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.SubContainer01 img {
+    padding: 10px;
+}
+.SubContainer01 p {
+    padding: 10px;
+}
+#RecadoInd img {
+    padding: 10px;
+}
+#RecadoInd p {
+    padding: 10px;
+}
+#DivRecado02 {
+    padding-top: 150px;
+    width: 40%;
+}
+#IFRECADO {
+    margin-left: 5%;
+    width: 80%;
+    height: 500px;
+}
+
+@media(max-width: 800px){
+    #ImgRecado {
+        width: 80%;
+        margin-left: 10%;
+        padding-bottom: -100px;
+    }
+    #RecadoMoniqui {
+        height: auto;
+    }
+    #ContainerRecado{
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+    }
+    #DivRecado01{
+        width: 100%;
+    }
+    #DivRecado02 {
+        width: 80%;
+        margin-left: 10%;
+        padding-bottom: 50px;
+    }
+    #SubContainer01 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    #SubContainer02 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .SubContainer01 {
+        font-size: 10px;
+    }
+    #IFRECADO {
+        margin-left: 5%;
+        width: 90%;
+        height: 500px;
+    }
+}
+#Lotes {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./_img/fundoLote.webp);
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size:  cover;
+}
+#TitleLotes {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+}
+#TitleLotes img {
+    width: 80px;
+}
+#TitleLotes p {
+    font-family: "Lucidity";
+    color: white;
+    font-size: 17px;
+    padding: 20px;
+}
+#ContainerLotes {
+    margin-top: 100px;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.LoteMC {
+    width: 30%;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    border: 1px solid transparent;
+    border-image: linear-gradient(135deg, #79490a, #79490a, #fac678, #b27817, #dda13b);
+    border-image-slice: 1;
+}
+@media(max-width: 800px){
+    #Lotes {
+        height: auto;
+    }
+    #TitleLotes {
+        width: 100%;
+        margin-left: 00%;
+    }
+    #TitleLotes img {
+        margin-left: 10px;
+    }
+    #TitleLotes p {
+        font-family: "Lucidity";
+        color: white;
+        font-size: 15px;
+        padding: 20px;
+    }
+    #ContainerLotes {
+        margin-top: 100px;
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+    .LoteMC {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+
+.TitleLote {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: "Worker";
+    font-weight: 400;
+}
+.ImgPrecoLote {
+    margin-bottom: 20px;
+    width: 30%;
+    margin-left: 35%;
+}
+.DivTXTentregaveis {
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+    
+}
+.txtIntregavel {
+    margin-bottom: 10px;
+    font-size: 9px;
+    font-family: "Poppins";
+    color: white;
+}
+.txtIntregavel img {
+    margin-right: 15px;
+}
+.AButton {
+    text-decoration: none;
+    color: #4d3614;
+}
+.BtNA {
+    width: 80%;
+    margin-left: 10%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background: radial-gradient(circle at 0% 0%, #79490a, #e19410, #fac678, #b27817, #dda13b);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Section10 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./_img/fundopergunta.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#FAQ{
+    padding-top: 150px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+#DiSection10Title {
+    width: 25%;
+}
+#Psection10 {
+    padding-top: 100px;
+    font-family: "Lucidity";
+    font-size: 22px;
+    color: white;
+}#Psection10 D {
+    color: #eaab03;
+}
+#Questions {
+    margin-top: 30px;
+    width: 50%;
+    border: solid 1px rgba(255, 255, 255, 0.247);
+}
+.Pergunta {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    border: solid 1px rgba(255, 255, 255, 0.247);
+    font-family: "Poppins";
+    color: white;
+    font-size: 18px;
+}
+.txtpergunta {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.setaimg {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 20px;
+    height: 10px;
+}
+.DivReponse {
+    width: 100%;
+    height: auto;
+    font-family: "Poppins";
+    font-size: 12px;
+    color: white;
+    display: none;
+}
+.DivReponse p {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#BTN10 {
+    margin-top: 20px;
+    height: 35px;
+    width: 90%;
+    background: radial-gradient(circle at center, #df832e, #683409);
+    border: none;
+    border-radius: 5px;
+    color: #2c2227;
+    font-family: "Poppins";
+    font-size: 17px;
+    font-weight: 600;
+}
+@media(max-width: 800px){
+    #Section10{
+        height: auto;
+    }
+    #FAQ{
+        display: flex;
+        flex-direction: column;
+    }  
+    #DiSection10Title {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 50px;
+    }
+    #Questions {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+#Section11 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/backgrund07.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Section12 {
+    width: 100%;
+    height: auto;
+    background-image: url(_img/fundo12.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#TitleSection12 {
+    padding-top: 80px;
+    text-align: center;
+    font-family:"Lucidity";
+    font-size: 22px;
+    color: white;
+    padding-bottom: 80px;
+}
+
+#DivSection12 {
+    padding-bottom: 80px;
+    margin-top: 80px;
+    width: 90%;
+    margin-left: 5%;
+}
+.imgsSection12 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    animation: wave 3s infinite;
+}
+.imgsSection12 img {
+    width: 30%;
+}
+@media(max-width: 600px){
+    #Section12 {
+        height: auto;
+    }
+    #TitleSection12 {
+        font-size: 20px;
+    }
+    #IMGSEctio02  {
+        display: none;
+    }
+    #IMGSEctio01 {
+        display: flex;
+        flex-direction: column;
+    }
+    .imgsSection12 img {
+        margin-left: 20%;
+        width: 60%;
+        margin-bottom: 10px;
+    }
+}
+#RedBar {
+    width: 100%;
+    height: 70px;
+    background: radial-gradient(circle at 0% 0%, #79490a, #e19410, #fac678, #b27817, #dda13b);
+}
+#PRedBar {
+    padding-top: 15px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: 900;
+    animation: wave 3s infinite;
+}
+@media(max-width:600px){
+    #PRedBar {
+        font-size: 20px;
+    }
+}
+#Section13 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(_img/fundoFinal.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#DivSection13 {
+    padding-top: 80px;
+    width: 50%;
+    height: 100vh;
+    margin-left: 5%;
+    display: flex;
+}
+
+@media(max-width: 800px) {
+    #DivSection13 {
+        padding-top: 80px;
+        width: 90%;
+        height: 100vh;
+        margin-left: 5%;
+        display: flex;
+    }
+    #Section13 {
+        width: 100%;
+        height: 100vh;
+        background-image: url(_img/finalmobile.webp);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+#TitleFinal {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    line-height: 45px;
+    font-family: "DM";
+    font-weight: 900;
+    color: white;
+    font-size: 62px;
+}
+D {
+    color: #f9a01b;
+}
+#Limitadas {
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+    font-family: "Poppins";
+}
+#BTNFinal {
+    cursor: pointer;
+    width: 80%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+    background: radial-gradient(circle at 0% 0%, #79490a, #e19410, #fac678, #b27817, #dda13b);
+}
