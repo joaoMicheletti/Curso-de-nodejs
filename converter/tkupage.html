@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <title>Mente Campeã</title>
     <style>
@@ -13,6 +12,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        @font-face {
+            font-family: 'Lucidity';
+            src: url(../fonts/Lucidity-Expand.ttf) format('truetype');
         }
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         #agradecemos {
@@ -23,18 +26,51 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+        #ConteinerVaga {
+            padding-top: 100PX;
+            margin-left: 10%;
+            width: 50%;
+        }
+        h1 {
+            text-align: center;
+            font-size: "Lucidity";
+            font-size: 40px;
+            color: #eaab03;
+        }
+        .initP {
+            padding: 10px;
+            margin-top: 40px;
+            color: white;
+            font-family: "Poppins";
+            font-size: 15px;
+        }
+        #ABTN {
+            text-decoration: none;
+            color: #eaab03;
+        }
+        #BTNA {
+            cursor: pointer;
+            width: 80%;
+            height: 45px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #4d3614;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-top: 30px;
+            background: radial-gradient(circle at 0% 0%, #79490a, #e19410, #fac678, #b27817, #dda13b);
+        }
         @media(max-width:800px){
             #agradecemos {
             width: 100%;
-            height: 100vh;
+            height:auto;
             background-image: url(_img/HomeMobile.webp);
             }
-            #p1a{
-                padding-top: 100px;
-                font-size: 30px;
-                font-weight: 600;
-                padding-bottom: 20px;
-            }       
+            #ConteinerVaga {
+                margin-left: 10%;
+                width: 80%;
+            }  
         }
        
 
@@ -42,6 +78,27 @@
 </head>
 <body>
     <section id="agradecemos">
+        <div id="ConteinerVaga">
+            <h1> PARABÉNS, A VAGA É SUA!</h1>  
+            
+            <p class="initP">
+                Você acaba de dar o primeiro <b>passo</b> para uma experiência 
+                <b>incrível</b> no nosso evento! Essa foi, sem dúvida, a <b>melhor decisão</b> que você poderia ter tomado. 
+                Agora, queremos<b>garantir</b> que seu dia seja único e <b>memorável.</b>
+            </p><br/>
+            <p class="initP">
+                Para isso, preencha o <b>formulário abaixo.</b><br/> 
+                Com esses dados, 
+                vamos fazer o seu <b>check-in no evento</b> e preparar tudo para que 
+                sua experiência seja perfeita desde o primeiro momento. <br/><br/>
+
+                <b>Estamos ansiosos para te ver e fazer desse evento um marco!<br/> 
+
+                Preencha agora e prepare-se para viver algo extraordinário!</b>
+            </p>
+            <a id="ABTN" href="https://form.jotform.com/moniquiagnes/imersao-mente-campea" target="_blank"><button id="BTNA">Preencher Formulário de check-in</button></a>
+        </div>
+        
         
     </section>
 </body>
