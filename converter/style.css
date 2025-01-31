@@ -686,6 +686,7 @@ LogoInfo img {
 @media(max-width: 800px){
     #Lotes {
         height: auto;
+        background-image: url(_img/lotemobile.webp);
     }
     #TitleLotes {
         width: 100%;
