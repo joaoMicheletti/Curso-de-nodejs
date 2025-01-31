@@ -835,10 +835,11 @@ LogoInfo img {
     margin-bottom: 10px;
 }
 .setaimg {
+    height: 10px;
+    width: 10px;
     margin-top: 10px;
     margin-right: 10px;
-    width: 20px;
-    height: 10px;
+
 }
 .DivReponse {
     width: 100%;
@@ -858,7 +859,7 @@ LogoInfo img {
     margin-top: 20px;
     height: 35px;
     width: 90%;
-    background: radial-gradient(circle at center, #df832e, #683409);
+    background: radial-gradient(circle at 0% 0%, #79490a, #e19410, #fac678, #b27817, #dda13b);
     border: none;
     border-radius: 5px;
     color: #2c2227;
