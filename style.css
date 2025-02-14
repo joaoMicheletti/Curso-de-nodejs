@@ -176,7 +176,7 @@ a{
 
 #Section02 {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-image: url(./img/bacgrund02.webp);
     background-position: center center;
     background-repeat: no-repeat;
@@ -186,7 +186,7 @@ a{
     width: 90%;
     margin-left: 5%;
     height: auto;
-    padding-top: 50px;
+    padding-top: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -374,28 +374,35 @@ YELLOW {
     width: 100%;
     height: 100vh;
 }
+#TitlrForms {
+    width: 70%;
+    margin-bottom: 30px;
+}
+#TitlrForms p {
+    padding: 10px;
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+}
 #DivSection03 {
-    padding-top: 40px;
     width: 50%;
+    padding-top: 30px;
     margin-left: 50%;
     display: flex;
-    flex-direction: row;
-
-    
+    flex-direction: column;    
+}
+@media(min-width: 850px){
+    #DivSection03 {
+        padding-top: 10px;
+    }
 }
 #Fomrulario {
     width: 70%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.562), transparent);
     border: solid 1px #ffe033bd;
 }
-#Fomrulario p {
-    padding: 10px;
-    color: white;
-    font-family: "Poppins";
-    font-size: 15px;
-}
-#Form {
 
+#Form {
     margin-top: 30px;
     width: 100%;
     display: flex;
@@ -430,13 +437,17 @@ YELLOW {
 @media(max-width: 800px){
     #Section03 {
         height: auto
-    }    
+    }  
+    #TitlrForms{
+        margin-left: 10%;
+        width: 80%;
+    }  
     #DivSection03 {
         padding-top: 80px;
         width: 100%;
         margin-left: 0%;
         display: flex;
-        flex-direction: row;
+        flex-direction:column;
     }
     #Fomrulario {
         width: 90%;
@@ -491,7 +502,7 @@ YELLOW {
 }
 .DivContainerSection04    #IMGMONIQUI {
     width: 50%;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-bottom: 50px;
 }
 #Bio {
@@ -501,7 +512,7 @@ YELLOW {
     color: white;
     font-family: "Poppins";
     font-size: 16px;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
@@ -517,7 +528,6 @@ YELLOW {
     font-size: 13px;
     color: white;
     width: 80%;
-    margin-left: 10%;
     margin-top: 20px;
     height: 45px;
     border: none;
@@ -525,6 +535,9 @@ YELLOW {
     background: linear-gradient(135deg, #79490a, #e19410, #fac678, #b27817, #dda13b);
 }
 @media(max-width: 800px){
+    #BTNBIO{
+        margin-left: 10%;
+    }
     #Bio {
         padding-top: -100px;
     }
@@ -554,16 +567,17 @@ YELLOW {
     background-size: cover;
 }
 #ContainerRoda {
-    padding-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 80%;
     margin-left: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #MetodoImg {
     margin-top: 80px;
-    width: 60%;
+    width: 80%;
 }
 #Roda {
     width: 99%;
@@ -664,6 +678,7 @@ YELLOW {
     height: 100%;
 }
 #GridQuadradinhos {
+    margin-top: 150px;
     width: 80%;
     margin-left: 20%;
 }
@@ -697,8 +712,8 @@ YELLOW {
     font-weight: 600;
 }
 #QF {
-    width: 60%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 15%;
     background: radial-gradient(circle at 0% 0%, #8cb600, #2e4405);
 }
 #selo {
@@ -708,9 +723,11 @@ YELLOW {
     flex-direction: row;
     justify-content: space-around;
 } #selo img {
+    padding: 5px;
     width: 50px;
 }
 #selo .TTT{ 
+    padding-top: 10px;
     font-size: 20px;
 }
 #selo .ccc {
@@ -795,29 +812,61 @@ YELLOW {
 
 
 #Button {
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
     padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+#FinalMoniqui img {
+    width: 100%;
 }
 #ImgButton {
+    padding-top: 150px;
     width: 80%;
     margin-left: 10%;
     display: flex;
     flex-direction: column;
 } 
+@keyframes tremor {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+
 #ImgButton img{
+    
     width: 50%;
-    margin-left: 50%;
+    margin-left: 25%;
     margin-bottom: 100px;
 }
+#IMGBUTTON {
+    animation: tremor 1.0s ease-in-out infinite;
+}
 @media(max-width: 800px) {
+    #ImgButton {
+        padding-top: 150px;
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+    }
     #ImgButton img{
         width: 100%;
         margin-left: 0%;
         margin-bottom: 100px;
     }
+    #FinalMoniqui{
+        display: none;
+    }
 }
+@media(max-width: 1000px){
+    #FinalMoniqui {
+        display: none;
+    }
 
+}
 #Footer {
     background-color: #0b0000;
     backdrop-filter: blur(5px);
